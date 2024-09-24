@@ -44,7 +44,7 @@ NEXT_PUBLIC_FORM_ACCESS_KEY
 ```bash
 pnpm run dev
 ```
-oe
+or
 ```bash
 npm run dev
 ```

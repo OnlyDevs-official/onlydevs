@@ -12,37 +12,25 @@ html {
   font-style: normal;
 }
 
-.aeonik-bold{
-  font-family: 'Aeonik bold';
-  font-weight: 900;
-  font-style: normal;
-}
-
-.aeonik-regular{
-  font-family: 'Aeonik regular';
+@font-face {
+  font-family: 'Aeonik-regular';
+  src: url('../app/Fonts/Aeonik-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
-.aeonik-light{
-  font-family: 'Aeonik light';
-  font-weight: 300;
+@font-face {
+  font-family: 'Aeonik-bold';
+  src: url('../app/Fonts/Aeonik-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-    font-family: 'Aeonik regular';
-    src: url(/app/Fonts/fonnts.com-Aeonik_Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Aeonik bold';
-    src: url(/app/Fonts/fonnts.com-Aeonik_Bold.ttf);
-}
-
-@font-face {
-    font-family: 'Aeonik light';
-    src: url(/app/Fonts/fonnts.com-Aeonik_Light.ttf);
+  font-family: 'Aeonik-light';
+  src: url('../app/Fonts/Aeonik-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 

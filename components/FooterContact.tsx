@@ -13,7 +13,7 @@ const ContactSection = () => {
     >
       <div className="flex flex-col lg:flex-row justify-between items-center">
         <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 aeonik-bold">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 Aeonik-bold">
             Looking for a Community?
           </h2>
           <p className="text-gray-300 mb-6 font-serif">
@@ -46,7 +46,7 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/3 text-center">
-          <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 aeonik-bold">
+          <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 Aeonik-bold">
             Join the community
           </h3>
           <p className="text-gray-300 mb-4 font-serif">Scan the QR code</p>

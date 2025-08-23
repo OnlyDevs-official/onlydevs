@@ -8,7 +8,7 @@ function AboutUs() {
       <div className="min-h-screen flex items-center mx-4 md:mx-10">
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
           <motion.h1
-            className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-8 py-3 bg-gradient-to-r from-gradientColor via-[#85B4BB] to-[#85B4BB] inline-block text-transparent bg-clip-text abril-fatface-regular"
+            className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-8 py-3 bg-gradient-to-r from-gradientColor via-[#85B4BB] to-[#85B4BB] inline-block text-transparent bg-clip-text Aeonik-bold"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}

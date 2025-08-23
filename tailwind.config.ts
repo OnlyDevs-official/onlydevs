@@ -108,5 +108,14 @@ function addVariablesForColors({ addBase, theme }: any) {
 
   addBase({
     ":root": newVars,
+    ".aeonik-regular": {
+      fontFamily: "Aeonik-regular",
+    },
+    ".aeonik-bold": {
+      fontFamily: "Aeonik-bold",
+    },
+    ".aeonik-light": {
+      fontFamily: "Aeonik-light",
+    },
   });
 }

@@ -11,6 +11,7 @@ import pattern from "@/public/assets/3d-pattern.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import globaal.css from "../app/globals.css";
 
 const HeroSection = () => {
   return (

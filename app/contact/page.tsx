@@ -48,7 +48,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="hidden lg:flex flex-col justify-between m-10 rounded-[30px] md:px-7 py-10 bg-gradient-to-t from-gradientColor  to-[#0F1015]">
               <div>
-                <h2 className="text-5xl font-bold mb-3 text-white abril-fatface-regular">
+                <h2 className="text-5xl font-bold mb-3 text-white aeonik-bold-fatface-regular">
                   Talk to us!
                 </h2>
                 <p className="mb-4 text-xl font-serif">
@@ -87,7 +87,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="md:p-7">
-              <h1 className="text-center text-3xl mb-10  font-bold  abril-fatface-regular">
+              <h1 className="text-center text-3xl mb-10  font-bold  aeonik-bold">
                 Contact Us
               </h1>
               <form onSubmit={handleSubmit} className="font-serif">

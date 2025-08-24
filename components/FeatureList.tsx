@@ -103,7 +103,7 @@ const FeatureItem = ({ feature, index }: featureItemProps) => {
           <h3 className="text-2xl sm:text-3xl md:text-4xl mb-4 font-aeonik font-bold">
             {feature.title}
           </h3>
-          <p className="text-sm sm:text-lg md:text-xl font-aeonik font-regular">
+          <p className="text-sm sm:text-lg md:text-xl font-aeonik font-light">
             {feature.description}
           </p>
         </div>

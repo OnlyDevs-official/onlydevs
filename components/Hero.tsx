@@ -14,7 +14,7 @@ const HeroSection = () => {
     <>
       <div className="min-h-screen flex flex-col justify-center items-center text-white px-4">
         <motion.h1
-          className="text-4xl md:text-8xl font-bold aeonic-bold text-center mb-8 mt-16"
+          className="text-4xl md:text-8xl font-bold aeonic-bold text-center mb-8 mt-24"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

@@ -98,7 +98,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Image src={pattern} alt="image" width={700} height={700} />
+                {/* <Image src={pattern} alt="image" width={700} height={700} /> */}
               </motion.div>
             </div>
           </div>

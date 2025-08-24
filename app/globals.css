@@ -6,11 +6,11 @@
 html {
   scroll-behavior: smooth;
 }
-.abril-fatface-regular {
+/* .abril-fatface-regular {
   font-family: 'Aeonik bold';
   font-weight: 900;
   font-style: normal;
-}
+} */
 
 @font-face {
   font-family: 'Aeonik-regular';

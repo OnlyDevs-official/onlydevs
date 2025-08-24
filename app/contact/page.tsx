@@ -62,7 +62,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center mb-2">
                   <InstagramLogoIcon className="text-white w-6 h-6 mr-3" />
-                  <span>@OnlyDevsOfficial</span>
+                  <span>@onlydev.s</span>
                 </div>
                 <div className="flex items-center mb-2">
                   <svg

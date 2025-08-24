@@ -26,7 +26,7 @@ const ContactSection = () => {
             <SocialButton href="https://www.linkedin.com/company/onlydevsofficial">
               <LinkedInLogoIcon className="w-6 h-6 sm:w-7 sm:h-7" />
             </SocialButton>
-            <SocialButton href="https://www.instagram.com/onlydevsofficial">
+            <SocialButton href="https://www.instagram.com/onlydev.s">
               <InstagramLogoIcon className="w-6 h-6 sm:w-7 sm:h-7" />
             </SocialButton>
             <SocialButton href="https://x.com/onlydevsoffic_">

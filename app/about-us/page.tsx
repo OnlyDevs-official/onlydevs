@@ -16,7 +16,7 @@ function AboutUs() {
             About OnlyDevs
           </motion.h1>
           <motion.p
-            className="max-w-6xl font-serif"
+            className="max-w-6xl Aeonik-regular"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

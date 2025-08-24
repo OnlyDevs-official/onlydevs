@@ -17,10 +17,10 @@ const FAQSection = () => {
             value={`item-${index}`}
             className="text-slate-100 font-roboto-flex"
           >
-            <AccordionTrigger className="md:text-2xl text-lg text-left font-serif">
+            <AccordionTrigger className="md:text-2xl text-lg text-left Aeonik-regular">
               {item.question}
             </AccordionTrigger>
-            <AccordionContent className="md:text-lg text-base font-serif">
+            <AccordionContent className="md:text-lg text-base Aeonik-regular">
               {item.answer}
             </AccordionContent>
           </AccordionItem>

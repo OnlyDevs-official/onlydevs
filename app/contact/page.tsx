@@ -51,12 +51,12 @@ const Contact = () => {
                 <h2 className="text-5xl font-bold mb-3 text-white Aeonik-bold-fatface-regular">
                   Talk to us!
                 </h2>
-                <p className="mb-4 text-xl font-serif">
+                <p className="mb-4 text-xl Aeonik-regular">
                   Ask us anything or just say hi...
                 </p>
               </div>
               <div className="">
-                <div className="flex items-center mb-2 font-serif">
+                <div className="flex items-center mb-2 Aeonik-regular">
                   <EnvelopeClosedIcon className="text-white w-6 h-6 mr-3" />
                   <span>onlydevsofficial@gmail.com</span>
                 </div>
@@ -90,7 +90,7 @@ const Contact = () => {
               <h1 className="text-center text-3xl mb-10  font-bold  aeonik-bold">
                 Contact Us
               </h1>
-              <form onSubmit={handleSubmit} className="font-serif">
+              <form onSubmit={handleSubmit} className="Aeonik-regular">
                 <div className="mb-6">
                   <label
                     className="block text-sm font-bold mb-2"

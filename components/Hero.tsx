@@ -22,7 +22,7 @@ const HeroSection = () => {
             <div className="flex justify-between md:flex-row flex-col">
               <div className="w-full md:w-1/2 flex flex-col justify-center text-white pr-0 md:pr-4">
                 <motion.h1
-                  className="text-2xl md:text-4xl mb-2 md:mb-4 font-bold abril-fatface-regular"
+                  className="text-2xl md:text-4xl mb-2 md:mb-4 font-bold Aeonik-bold"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
@@ -30,7 +30,7 @@ const HeroSection = () => {
                   Empowering Creativity in Design
                 </motion.h1>
                 <motion.p
-                  className="mb-6 text-base md:text-lg font-serif"
+                  className="mb-6 text-base md:text-lg Aeonik-light"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}

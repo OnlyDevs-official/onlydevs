@@ -14,7 +14,8 @@ const HeroSection = () => {
     <>
       <div className="min-h-screen flex flex-col justify-center items-center text-white px-4">
         <motion.h1
-          className="text-4xl md:text-8xl font-bold aeonic-bold text-center mb-8 mt-60"
+          className="text-4xl md:text-8xl text-center mb-8"
+          style={{ fontFamily: 'Aeonik-bold', fontWeight: 700 }}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -25,7 +26,8 @@ const HeroSection = () => {
         <AnimatedButton />
         
         <motion.p
-          className="text-lg md:text-2xl aeonic-light text-center max-w-4xl mt-32"
+          className="text-lg md:text-2xl text-center max-w-4xl mt-32"
+          style={{ fontFamily: 'Aeonik-light', fontWeight: 300 }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}

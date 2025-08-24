@@ -33,7 +33,7 @@ const Navbar = () => {
           className="hover:underline"
         />
       </Link>
-      <div className="hidden md:flex text-sm md:text-base rounded-full space-x-2 md:space-x-4 font-aeonik font-regular hover:bg-white text-black">
+      <div className="hidden md:flex text-sm md:text-base rounded-full space-x-2 md:space-x-4 font-aeonik font-regular">
         <Link href="/">
           <Button>Home</Button>
         </Link>
@@ -89,7 +89,7 @@ export default Navbar;
 
 function Button({ children }: { children: ReactNode }) {
   return (
-    <button className="px-4 py-2  bg-black text-white text-sm transition duration-200">
+    <button className="px-4 py-2  bg-black text-white text-sm hover:bg-white text-black transition duration-200">
       {children}
     </button>
   );

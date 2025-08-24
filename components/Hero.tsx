@@ -27,7 +27,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  Revolutionising Design & Development
+                  revolutionising design & development
                 </motion.h1>
                 <motion.p
                   className="mb-6 text-base md:text-lg Aeonik-light"
@@ -45,7 +45,7 @@ const HeroSection = () => {
                   development communities.
                 </motion.p>
                 <div className="flex space-x-4">
-                  <Link
+                  {/* <Link
                     href={"https://www.linkedin.com/company/onlydevsofficial"}
                     target="_blank"
                     aria-placeholder="LinkedIn social"
@@ -67,7 +67,7 @@ const HeroSection = () => {
                     href={"https://x.com/onlydevsoffic_"}
                     target="_blank"
                     aria-placeholder="X social"
-                  >
+                  > */}
                     <Button>
                       <svg
                         width="30"
@@ -98,7 +98,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Image src={pattern} alt="image" width={700} height={700} />
+                {/* <Image src={pattern} alt="image" width={700} height={700} /> */}
               </motion.div>
             </div>
           </div>

@@ -62,7 +62,8 @@ const config = {
         custom: "0 6px 10px 4px rgba(53, 114, 239, 0.6)", // Add custom shadow using the gradient color
       },
       fontFamily: {
-        "roboto-flex": ["Roboto Flex", "sans-serif"], // Přidání vlastního písma 'Roboto Flex'
+        "roboto-flex": ["Roboto Flex", "sans-serif"], 
+        aeonik: ["Aeonik", "sans-serif"], // ✅ Added Aeonik family
       },
 
       borderRadius: {
@@ -108,14 +109,18 @@ function addVariablesForColors({ addBase, theme }: any) {
 
   addBase({
     ":root": newVars,
+    // ✅ unified Aeonik setup
     ".aeonik-regular": {
-      fontFamily: "Aeonik-regular",
+      fontFamily: "Aeonik",
+      fontWeight: "400",
     },
     ".aeonik-bold": {
-      fontFamily: "Aeonik-bold",
+      fontFamily: "Aeonik",
+      fontWeight: "700",
     },
     ".aeonik-light": {
-      fontFamily: "Aeonik-light",
+      fontFamily: "Aeonik",
+      fontWeight: "300",
     },
   });
 }

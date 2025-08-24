@@ -6,24 +6,23 @@ html {
   scroll-behavior: smooth;
 }
 
-
 @font-face {
-  font-family: 'Aeonik-regular';
-  src: url('/Fonts/Aeonik-Regular.ttf') format('truetype');
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Aeonik-bold';
-  src: url('/Fonts/Aeonik-Bold.ttf') format('truetype');
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Aeonik-light';
-  src: url('/Fonts/Aeonik-Light.ttf') format('truetype');
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }

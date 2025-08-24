@@ -16,13 +16,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className="Aeonik-bold">
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+return (
+  <html lang="en">
+    <body className="aeonik-bold">
+      <Navbar />
+      {children}
+      <Footer />
+    </body>
+  </html>
+);
 }

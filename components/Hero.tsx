@@ -25,7 +25,7 @@ const HeroSection = () => {
         <AnimatedButton />
         
         <motion.p
-          className="text-lg md:text-2xl aeonic-light text-center max-w-4xl mt-32"
+          className="text-lg md:text-2xl font-aeonik font-light text-center max-w-4xl mt-32"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}

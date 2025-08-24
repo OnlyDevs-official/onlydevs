@@ -12,48 +12,33 @@ import { useRouter } from "next/navigation";
 const HeroSection = () => {
   return (
     <>
-      <div>
-        <div className="h-36"></div>
-        <div className="md:px-20 px-4">
-          <div className="p-6 md:p-12 mb-8 md:mb-16 rounded-3xl bg-gradient-to-t from-gradientColor to-[#0F1015]">
-            <div className="flex justify-between md:flex-row flex-col">
-              <div className="w-full md:w-1/2 flex flex-col justify-center text-white pr-0 md:pr-4">
-                <motion.h1
-                  className="text-2xl md:text-4xl mb-2 md:mb-4 font-bold aeonic-bold"
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  revolutionising design & development
-                </motion.h1>
-                <motion.p
-                  className="mb-6 text-base md:text-lg aeonic-light"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  OnlyDevs is an energetic platform designed for developers and
-                  designers to network and collaborate. It serves as a
-                  comprehensive resource center where members can access a
-                  variety of tools, uncover innovative solutions, and
-                  participate in insightful discussions. Our dedicated forum
-                  promotes an atmosphere for knowledge sharing, idea
-                  exploration, and problem-solving within the design &
-                  development communities.
-                </motion.p>
-                <AnimatedButton />
-              </div>
-              <motion.div
-                className="w-full md:w-1/2 h-[300px] hidden md:block md:h-[540px] relative"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                {/* <Image src={pattern} alt="image" width={700} height={700} /> */}
-              </motion.div>
-            </div>
-          </div>
-        </div>
+      <div className="min-h-screen flex flex-col justify-center items-center text-white px-4">
+        <motion.h1
+          className="text-4xl md:text-8xl font-bold aeonic-bold text-center mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          revolutionising design & development
+        </motion.h1>
+        
+        <AnimatedButton />
+        
+        <motion.p
+          className="text-lg md:text-2xl aeonic-light text-center max-w-4xl mt-32"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          OnlyDevs is an energetic platform designed for developers and
+          designers to network and collaborate. It serves as a
+          comprehensive resource center where members can access a
+          variety of tools, uncover innovative solutions, and
+          participate in insightful discussions. Our dedicated forum
+          promotes an atmosphere for knowledge sharing, idea
+          exploration, and problem-solving within the design &
+          development communities.
+        </motion.p>
       </div>
     </>
   );

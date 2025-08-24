@@ -24,7 +24,7 @@ const HeroSection = () => {
         
         <AnimatedButton />
         
-        <motion.p
+        {/* <motion.p
           className="text-lg md:text-2xl font-aeonik font-light text-center max-w-4xl mt-32"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -38,7 +38,7 @@ const HeroSection = () => {
           promotes an atmosphere for knowledge sharing, idea
           exploration, and problem-solving within the design &
           development communities.
-        </motion.p>
+        </motion.p> */}
       </div>
     </>
   );

@@ -16,7 +16,7 @@ const ContactSection = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 Aeonik-bold">
             Looking for a Community?
           </h2>
-          <p className="text-gray-300 mb-6 font-serif">
+          <p className="text-gray-300 mb-6 Aeonik-regular">
             Want better connection and make friends with similar taste? We have
             got you covered! Join our community to share your work and provide
             your suggestions on making the design & development community a
@@ -49,7 +49,7 @@ const ContactSection = () => {
           <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 Aeonik-bold">
             Join the community
           </h3>
-          <p className="text-gray-300 mb-4 font-serif">Scan the QR code</p>
+          <p className="text-gray-300 mb-4 Aeonik-regular">Scan the QR code</p>
           <div className="inline-block">
             <Image
               src={DiscordQr}
@@ -59,7 +59,7 @@ const ContactSection = () => {
               className="rounded-2xl"
             />
           </div>
-          <p className="text-gray-300 mt-4 text-sm sm:text-base font-serif">
+          <p className="text-gray-300 mt-4 text-sm sm:text-base Aeonik-regular">
             Feel free to
             <br />
             contact us regarding

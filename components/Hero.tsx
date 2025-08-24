@@ -27,7 +27,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  Empowering Creativity in Design
+                  Revolutionising Design & Development
                 </motion.h1>
                 <motion.p
                   className="mb-6 text-base md:text-lg Aeonik-light"

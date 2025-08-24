@@ -2,9 +2,6 @@
 import React, { ReactNode, useState } from "react";
 import {
   ArrowDownIcon,
-  InstagramLogoIcon,
-  LinkedInLogoIcon,
-  PersonIcon,
 } from "@radix-ui/react-icons";
 import Image from "next/image";
 import pattern from "@/public/assets/3d-pattern.png";
@@ -22,7 +19,7 @@ const HeroSection = () => {
             <div className="flex justify-between md:flex-row flex-col">
               <div className="w-full md:w-1/2 flex flex-col justify-center text-white pr-0 md:pr-4">
                 <motion.h1
-                  className="text-2xl md:text-4xl mb-2 md:mb-4 font-bold Aeonik-bold"
+                  className="text-2xl md:text-4xl mb-2 md:mb-4 font-bold aeonic-bold"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
@@ -30,7 +27,7 @@ const HeroSection = () => {
                   revolutionising design & development
                 </motion.h1>
                 <motion.p
-                  className="mb-6 text-base md:text-lg Aeonik-light"
+                  className="mb-6 text-base md:text-lg aeonic-light"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
@@ -44,7 +41,7 @@ const HeroSection = () => {
                   exploration, and problem-solving within the design &
                   development communities.
                 </motion.p>
-                {/* <div className="flex space-x-4">
+                <div className="flex space-x-4">
                   <Link
                     href={"https://www.linkedin.com/company/onlydevsofficial"}
                     target="_blank"
@@ -67,7 +64,7 @@ const HeroSection = () => {
                     href={"https://x.com/onlydevsoffic_"}
                     target="_blank"
                     aria-placeholder="X social"
-                  > */}
+                  >
                     <Button>
                       <svg
                         width="30"

@@ -100,10 +100,10 @@ const FeatureItem = ({ feature, index }: featureItemProps) => {
         <div
           className={`w-full md:w-1/2 ${index % 2 === 1 ? "md:order-1" : ""}`}
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 font-serif ">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl mb-4 font-aeonik font-bold">
             {feature.title}
           </h3>
-          <p className="text-sm sm:text-lg md:text-xl font-serif">
+          <p className="text-sm sm:text-lg md:text-xl font-aeonik font-regular">
             {feature.description}
           </p>
         </div>

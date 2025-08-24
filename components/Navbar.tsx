@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed left-1/2 transform -translate-x-1/2 w-[90vw] flex items-center box-border justify-between md:px-6 px-4 py-2 md:py-4 backdrop-blur-md rounded-full border border-gray-700 bg-black z-50 mt-3">
+    <nav className="fixed left-1/2 transform -translate-x-1/2 w-[90vw] flex items-center box-border justify-between md:px-6 px-4 py-2 md:py-4 backdrop-blur-md bg-opacity-35 rounded-full border border-gray-700 bg-black z-50 mt-3">
       <Link href="/">
         <Image
           src={logo}

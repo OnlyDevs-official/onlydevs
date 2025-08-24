@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 const HeroSection = () => {
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-center items-center text-white px-4">
+      <div className="min-h-screen flex flex-col justify-center items-center tracking-tight text-white px-4">
         <motion.h1
           className="text-4xl md:text-8xl font-bold aeonic-bold text-center mb-8 mt-60"
           initial={{ opacity: 0, y: -20 }}

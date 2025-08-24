@@ -33,7 +33,7 @@ const Navbar = () => {
           className="hover:underline"
         />
       </Link>
-      <div className="hidden md:flex text-sm md:text-base space-x-2 md:space-x-4 Aeonik-bold">
+      <div className="hidden text-sm md:text-base space-x-2 md:space-x-4 aeonik-bold">
         <Link href="/">
           <Button>Home</Button>
         </Link>

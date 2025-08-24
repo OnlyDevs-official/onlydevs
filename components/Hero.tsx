@@ -44,7 +44,7 @@ const HeroSection = () => {
                   exploration, and problem-solving within the design &
                   development communities.
                 </motion.p>
-                <div className="flex space-x-4">
+                {/* <div className="flex space-x-4">
                   <Link
                     href={"https://www.linkedin.com/company/onlydevsofficial"}
                     target="_blank"
@@ -67,7 +67,7 @@ const HeroSection = () => {
                     href={"https://x.com/onlydevsoffic_"}
                     target="_blank"
                     aria-placeholder="X social"
-                  >
+                  > */}
                     <Button>
                       <svg
                         width="30"

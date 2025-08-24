@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "OnlyDevs",
-  description: "Empowering Creativity in Design",
+  description: "Revolutionising Design & Development",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="Aeonik-bold">
         <Navbar />
         {children}
         <Footer />

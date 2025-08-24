@@ -89,7 +89,7 @@ export default Navbar;
 
 function Button({ children }: { children: ReactNode }) {
   return (
-    <button className="px-4 py-2 bg-black text-white text-sm hover:bg-white hover:text-black transition duration-200">
+    <button className="px-4 py-2 rounded-full bg-black text-white text-sm hover:bg-white hover:text-black transition duration-200">
       {children}
     </button>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface EventImage {
   id: number;
@@ -9,7 +9,6 @@ interface EventImage {
 }
 
 const EventsCarousel: React.FC = () => {
-  // Sample event images - replace these URLs with your actual event photos
   const eventImages: EventImage[] = [
     {
       id: 1,
@@ -44,50 +43,88 @@ const EventsCarousel: React.FC = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
-  // Auto-play functionality
+  // Auto-play functionality - always running
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
-        // If we're showing the last set of 4 images (starting from index 2), go back to 0
-        return prevIndex >= eventImages.length - 4 ? 0 : prevIndex + 1;
+        const nextIndex = prevIndex + 1;
+        if (nextIndex >= eventImages.length) {
+          return 0;
+        }
+        return nextIndex;
       });
-    }, 3000); // Change slides every 3 seconds
+    }, 2000); // Faster: changed from 3000ms to 2000ms
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, eventImages.length]);
+  }, [eventImages.length]);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex >= eventImages.length - 4 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex <= 0 ? eventImages.length - 4 : prevIndex - 1
-    );
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  // Calculate visible images (4 at a time)
-  const getVisibleImages = () => {
-    const visible = [];
-    for (let i = 0; i < 4; i++) {
-      const imageIndex = (currentIndex + i) % eventImages.length;
-      visible.push(eventImages[imageIndex]);
+  // Auto-scroll effect with smoother animation
+  useEffect(() => {
+    if (carouselRef.current) {
+      const scrollPosition = currentIndex * 320; // 320px = card width + gap
+      carouselRef.current.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
+      
+      // Add CSS transition for even smoother scrolling
+      carouselRef.current.style.scrollBehavior = 'smooth';
     }
-    return visible;
+  }, [currentIndex]);
+
+  // Touch/Mouse handlers for swipe functionality
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!carouselRef.current) return;
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  const handleScroll = () => {
+    if (!carouselRef.current) return;
+    const scrollPosition = carouselRef.current.scrollLeft;
+    const cardWidth = 320;
+    const newIndex = Math.round(scrollPosition / cardWidth);
+    setCurrentIndex(Math.min(newIndex, eventImages.length - 1));
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-8">
+    <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* Heading */}
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-800 mb-3">
@@ -99,60 +136,60 @@ const EventsCarousel: React.FC = () => {
       </div>
 
       {/* Carousel Container */}
-      <div 
-        className="relative bg-white rounded-lg shadow-lg overflow-hidden"
-        onMouseEnter={() => setIsAutoPlaying(false)}
-        onMouseLeave={() => setIsAutoPlaying(true)}
-      >
-        {/* Images Container */}
-        <div className="relative h-64 md:h-80">
-          <div className="flex transition-transform duration-500 ease-in-out h-full">
-            {getVisibleImages().map((image, index) => (
-              <div
-                key={`${image.id}-${currentIndex}-${index}`}
-                className="w-1/4 flex-shrink-0 px-1"
-              >
-                <img
-                  src={image.url}
-                  alt={image.alt}
-                  className="w-full h-full object-cover rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
-                />
-              </div>
-            ))}
-          </div>
+      <div className="relative">
+        {/* Left Gradient Overlay */}
+        <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none" />
+        
+        {/* Right Gradient Overlay */}
+        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-black/40 to-transparent z-10 pointer-events-none" />
+
+        {/* Scrollable Images Container */}
+        <div
+          ref={carouselRef}
+          className={`flex gap-4 overflow-x-auto scrollbar-hide py-4 px-4 transition-all duration-300 ease-out ${
+            isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'
+          }`}
+          style={{ 
+            scrollbarWidth: 'none', 
+            msOverflowStyle: 'none',
+            scrollBehavior: 'smooth'
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onScroll={handleScroll}
+        >
+          {/* Render multiple sets for infinite scroll effect */}
+          {[...eventImages, ...eventImages].map((image, index) => (
+            <div
+              key={`${image.id}-${Math.floor(index / eventImages.length)}`}
+              className="flex-shrink-0 w-80 h-64 group relative"
+            >
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
+                draggable={false}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-lg" />
+            </div>
+          ))}
         </div>
 
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-all duration-200 hover:scale-110"
-          aria-label="Previous images"
-        >
-          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-all duration-200 hover:scale-110"
-          aria-label="Next images"
-        >
-          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
         {/* Dots Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {Array.from({ length: eventImages.length - 3 }).map((_, index) => (
+        <div className="flex justify-center mt-6 space-x-2">
+          {eventImages.map((_, index) => (
             <button
               key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                currentIndex === index
-                  ? 'bg-blue-500 scale-110'
-                  : 'bg-white/60 hover:bg-white/80'
+              onClick={() => setCurrentIndex(index)}
+              className={`rounded-full transition-all duration-500 ease-out ${
+                Math.floor(currentIndex) === index
+                  ? 'bg-gray-800 w-8 h-2'
+                  : 'bg-gray-400 hover:bg-gray-600 w-2 h-2'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -160,15 +197,25 @@ const EventsCarousel: React.FC = () => {
         </div>
       </div>
 
-      {/* Auto-play indicator */}
-      <div className="flex justify-center mt-4">
-        <button
-          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200"
-        >
-          {isAutoPlaying ? 'Pause Auto-play' : 'Resume Auto-play'}
-        </button>
-      </div>
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          scroll-behavior: smooth;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        
+        /* Enhanced smooth scrolling */
+        .scrollbar-hide {
+          scroll-snap-type: x mandatory;
+        }
+        
+        .scrollbar-hide > div {
+          scroll-snap-align: start;
+        }
+      `}</style>
     </div>
   );
 };

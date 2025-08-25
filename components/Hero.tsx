@@ -67,7 +67,6 @@ const AnimatedButton = () => {
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}
       >
-        <p className="text-lg">Why Should You Join OnlyDevs?</p>
         <ArrowDownIcon
           className={`w-5 h-5 transition-transform duration-300 ${
             isHovered ? "transform translate-y-1" : ""

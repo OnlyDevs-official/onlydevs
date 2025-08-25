@@ -42,49 +42,42 @@ const EventsCarousel: React.FC = () => {
     }
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>();
 
-  // Auto-play functionality - continuous smooth movement
+  // Smooth continuous auto-scroll
   useEffect(() => {
-    const interval = setInterval(() => {
+    const smoothScroll = () => {
       if (carouselRef.current && !isDragging) {
-        const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
-        const currentScrollLeft = carouselRef.current.scrollLeft;
+        const container = carouselRef.current;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
         
-        // Move forward by one image width
-        const nextScrollPosition = currentScrollLeft + 352; // 320px (image) + 32px (gap)
+        // Smooth continuous movement (1 pixel per frame at 60fps)
+        container.scrollLeft += 1;
         
-        if (nextScrollPosition >= maxScrollLeft) {
-          // Reset to beginning for infinite loop
-          carouselRef.current.scrollTo({
-            left: 0,
-            behavior: 'smooth'
-          });
-        } else {
-          // Move to next position
-          carouselRef.current.scrollTo({
-            left: nextScrollPosition,
-            behavior: 'smooth'
-          });
+        // Reset for infinite loop when near the end
+        if (container.scrollLeft >= maxScrollLeft / 2) {
+          container.scrollLeft = 0;
         }
       }
-    }, 2000);
+      animationRef.current = requestAnimationFrame(smoothScroll);
+    };
 
-    return () => clearInterval(interval);
+    animationRef.current = requestAnimationFrame(smoothScroll);
+    
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, [isDragging]);
 
   // Update current index based on scroll position
   const updateCurrentIndex = () => {
-    if (carouselRef.current) {
-      const scrollPosition = carouselRef.current.scrollLeft;
-      const cardWidth = 352;
-      const newIndex = Math.round(scrollPosition / cardWidth);
-      setCurrentIndex(newIndex);
-    }
+    // Simplified since we're using continuous scroll
   };
 
   // Touch/Mouse handlers for swipe functionality
@@ -133,32 +126,31 @@ const EventsCarousel: React.FC = () => {
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* Heading */}
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-800 mb-3">
+        <h2 className="text-4xl font-aeonik font-bold text-white mb-3">
           Our Events
         </h2>
-        <p className="text-lg text-gray-600 font-medium">
+        <p className="text-lg text-white font-aeonik font-light">
           We don&apos;t just host events, we curate them
         </p>
       </div>
 
       {/* Carousel Container */}
       <div className="relative">
-        {/* Left Gradient Overlay */}
-        <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none" />
+        {/* Left Gradient Overlay - Enhanced */}
+        <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
         
-        {/* Right Gradient Overlay */}
-        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-black/40 to-transparent z-10 pointer-events-none" />
+        {/* Right Gradient Overlay - Enhanced */}
+        <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
         {/* Scrollable Images Container */}
         <div
           ref={carouselRef}
-          className={`flex gap-8 overflow-x-auto scrollbar-hide py-4 px-4 transition-all duration-300 ease-out ${
+          className={`flex gap-8 overflow-x-auto scrollbar-hide py-4 px-6 ${
             isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'
           }`}
           style={{ 
             scrollbarWidth: 'none', 
             msOverflowStyle: 'none',
-            scrollBehavior: 'smooth'
           }}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
@@ -169,8 +161,8 @@ const EventsCarousel: React.FC = () => {
           onTouchEnd={handleTouchEnd}
           onScroll={handleScroll}
         >
-          {/* Render multiple sets for true infinite scroll */}
-          {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
+          {/* Render multiple sets for seamless infinite loop */}
+          {[...eventImages, ...eventImages, ...eventImages, ...eventImages].map((image, index) => (
             <div
               key={`${image.id}-${Math.floor(index / eventImages.length)}-${index}`}
               className="flex-shrink-0 w-80 h-64 group relative"
@@ -191,19 +183,20 @@ const EventsCarousel: React.FC = () => {
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
-          scroll-behavior: smooth;
         }
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
         
-        /* Enhanced smooth scrolling */
+        /* Smooth hardware acceleration */
         .scrollbar-hide {
-          scroll-snap-type: x mandatory;
+          will-change: scroll-position;
+          transform: translateZ(0);
         }
         
         .scrollbar-hide > div {
-          scroll-snap-align: start;
+          will-change: transform;
+          transform: translateZ(0);
         }
       `}</style>
     </div>

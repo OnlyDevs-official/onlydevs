@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Img from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const EventsCarousel = () => {
@@ -104,7 +105,7 @@ const EventsCarousel = () => {
                 key={`${image.id}-${currentIndex}-${index}`}
                 className="w-1/4 flex-shrink-0 px-1"
               >
-                <img
+                <Img
                   src={image.url}
                   alt={image.alt}
                   className="w-full h-full object-cover rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"

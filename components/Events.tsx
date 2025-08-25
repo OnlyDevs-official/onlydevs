@@ -48,34 +48,44 @@ const EventsCarousel: React.FC = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  // Auto-play functionality - always running
+  // Auto-play functionality - continuous smooth movement
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        const nextIndex = prevIndex + 1;
-        if (nextIndex >= eventImages.length) {
-          return 0;
+      if (carouselRef.current && !isDragging) {
+        const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+        const currentScrollLeft = carouselRef.current.scrollLeft;
+        
+        // Move forward by one image width
+        const nextScrollPosition = currentScrollLeft + 352; // 320px (image) + 32px (gap)
+        
+        if (nextScrollPosition >= maxScrollLeft) {
+          // Reset to beginning for infinite loop
+          carouselRef.current.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          });
+        } else {
+          // Move to next position
+          carouselRef.current.scrollTo({
+            left: nextScrollPosition,
+            behavior: 'smooth'
+          });
         }
-        return nextIndex;
-      });
-    }, 2000); // Faster: changed from 3000ms to 2000ms
+      }
+    }, 2000);
 
     return () => clearInterval(interval);
-  }, [eventImages.length]);
+  }, [isDragging]);
 
-  // Auto-scroll effect with smoother animation
-  useEffect(() => {
+  // Update current index based on scroll position
+  const updateCurrentIndex = () => {
     if (carouselRef.current) {
-      const scrollPosition = currentIndex * 320; // 320px = card width + gap
-      carouselRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
-      });
-      
-      // Add CSS transition for even smoother scrolling
-      carouselRef.current.style.scrollBehavior = 'smooth';
+      const scrollPosition = carouselRef.current.scrollLeft;
+      const cardWidth = 352;
+      const newIndex = Math.round(scrollPosition / cardWidth);
+      setCurrentIndex(newIndex);
     }
-  }, [currentIndex]);
+  };
 
   // Touch/Mouse handlers for swipe functionality
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -116,11 +126,7 @@ const EventsCarousel: React.FC = () => {
   };
 
   const handleScroll = () => {
-    if (!carouselRef.current) return;
-    const scrollPosition = carouselRef.current.scrollLeft;
-    const cardWidth = 320;
-    const newIndex = Math.round(scrollPosition / cardWidth);
-    setCurrentIndex(Math.min(newIndex, eventImages.length - 1));
+    updateCurrentIndex();
   };
 
   return (
@@ -146,7 +152,7 @@ const EventsCarousel: React.FC = () => {
         {/* Scrollable Images Container */}
         <div
           ref={carouselRef}
-          className={`flex gap-4 overflow-x-auto scrollbar-hide py-4 px-4 transition-all duration-300 ease-out ${
+          className={`flex gap-8 overflow-x-auto scrollbar-hide py-4 px-4 transition-all duration-300 ease-out ${
             isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'
           }`}
           style={{ 
@@ -163,36 +169,20 @@ const EventsCarousel: React.FC = () => {
           onTouchEnd={handleTouchEnd}
           onScroll={handleScroll}
         >
-          {/* Render multiple sets for infinite scroll effect */}
-          {[...eventImages, ...eventImages].map((image, index) => (
+          {/* Render multiple sets for true infinite scroll */}
+          {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
             <div
-              key={`${image.id}-${Math.floor(index / eventImages.length)}`}
+              key={`${image.id}-${Math.floor(index / eventImages.length)}-${index}`}
               className="flex-shrink-0 w-80 h-64 group relative"
             >
               <img
                 src={image.url}
                 alt={image.alt}
-                className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
+                className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
                 draggable={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-2xl" />
             </div>
-          ))}
-        </div>
-
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-6 space-x-2">
-          {eventImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`rounded-full transition-all duration-500 ease-out ${
-                Math.floor(currentIndex) === index
-                  ? 'bg-gray-800 w-8 h-2'
-                  : 'bg-gray-400 hover:bg-gray-600 w-2 h-2'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
           ))}
         </div>
       </div>

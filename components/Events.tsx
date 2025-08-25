@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const EventsCarousel = () => {
+  // Sample event images - replace these URLs with your actual event photos
   const eventImages = [
     {
       id: 1,
@@ -120,7 +120,9 @@ const EventsCarousel = () => {
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-all duration-200 hover:scale-110"
           aria-label="Previous images"
         >
-          <ChevronLeft className="w-6 h-6 text-gray-600" />
+          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
         </button>
 
         <button
@@ -128,7 +130,9 @@ const EventsCarousel = () => {
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-all duration-200 hover:scale-110"
           aria-label="Next images"
         >
-          <ChevronRight className="w-6 h-6 text-gray-600" />
+          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </button>
 
         {/* Dots Indicator */}

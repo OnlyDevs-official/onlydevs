@@ -12,32 +12,32 @@ const EventsCarousel: React.FC = () => {
   const eventImages: EventImage[] = [
     {
       id: 1,
-      url: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&h=300&fit=crop',
-      alt: 'Corporate Event 1'
+      url: '/assets/events/meshcraft.png',
+      alt: 'Meshcraft'
     },
     {
       id: 2,
-      url: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop',
+      url: '/assets/events/Stylt.png',
       alt: 'Conference Event'
     },
     {
       id: 3,
-      url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop',
+      url: '/assets/events/interface14(1).png',
       alt: 'Workshop Event'
     },
     {
       id: 4,
-      url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=300&fit=crop',
+      url: '/assets/events/meshcraft.png',
       alt: 'Networking Event'
     },
     {
       id: 5,
-      url: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=400&h=300&fit=crop',
+      url: '/assets/events/Stylt.png',
       alt: 'Team Building Event'
     },
     {
       id: 6,
-      url: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=300&fit=crop',
+      url: '/assets/events/interface14(1).png',
       alt: 'Awards Ceremony'
     }
   ];
@@ -130,17 +130,17 @@ const EventsCarousel: React.FC = () => {
           Our Events
         </h2>
         <p className="text-lg text-white font-aeonik font-light">
-          We don&apos;t just host events, we curate them
+          We don&apos;t just host events, we curate experiences.
         </p>
       </div>
 
       {/* Carousel Container */}
       <div className="relative">
         {/* Left Gradient Overlay - Enhanced */}
-        <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />
         
         {/* Right Gradient Overlay - Enhanced */}
-        <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none" />
 
         {/* Scrollable Images Container */}
         <div

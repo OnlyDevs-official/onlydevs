@@ -1,8 +1,16 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 
-const EventsCarousel = () => {
+interface EventImage {
+  id: number;
+  url: string;
+  alt: string;
+}
+
+const EventsCarousel: React.FC = () => {
   // Sample event images - replace these URLs with your actual event photos
-  const eventImages = [
+  const eventImages: EventImage[] = [
     {
       id: 1,
       url: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&h=300&fit=crop',

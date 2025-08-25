@@ -62,7 +62,7 @@ const AnimatedButton = () => {
   return (
     <div className="my-6">
       <button
-        className="border border-white rounded-full flex items-center px-5 py-3 cursor-pointer transition-all duration-300  hover:bg-opacity-10 w-[40px] h-[40px]"
+        className="border border-white rounded-full flex items-center px-5 py-3 cursor-pointer transition-all duration-300  hover:bg-opacity-10 w-[80px] h-[80px]"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}

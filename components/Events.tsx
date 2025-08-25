@@ -17,28 +17,28 @@ const EventsCarousel: React.FC = () => {
     },
     {
       id: 2,
-      url: '/assets/events/Stylt.png',
-      alt: 'Conference Event'
+      url: '/assets/events/Stylt final.png',
+      alt: 'Stylt'
     },
     {
       id: 3,
-      url: '/assets/events/interface14(1).png',
-      alt: 'Workshop Event'
+      url: '/assets/events/interface 14(1).png',
+      alt: 'Interface 14'
     },
     {
       id: 4,
       url: '/assets/events/meshcraft.png',
-      alt: 'Networking Event'
+      alt: 'Meshcraft'
     },
     {
       id: 5,
-      url: '/assets/events/Stylt.png',
-      alt: 'Team Building Event'
+      url: '/assets/events/Stylt final.png',
+      alt: 'Stylt'
     },
     {
       id: 6,
-      url: '/assets/events/interface14(1).png',
-      alt: 'Awards Ceremony'
+      url: '/assets/events/interface 14(1).png',
+      alt: 'Interface14'
     }
   ];
 

@@ -21,6 +21,15 @@ const HeroSection = () => {
         >
           revolutionising design & development
         </motion.h1>
+
+        <motion.p
+        className="text-lg md:text-2xl font-aeonik font-light text-center max-w-4xl"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        >
+          Building a platform tailored for designers & developers
+        </motion.p>
         
         <AnimatedButton />
         

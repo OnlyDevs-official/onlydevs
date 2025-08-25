@@ -19,7 +19,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          revolutionising design & development
+          revolutionising <span className = "text-shadow: 0 0 5px #006eff, 0 0 10px #006eff, 0 0 20px #006eff, 0 0 40px #006eff;">design</span> & <span className = "text-shadow: 0 0 5px #006eff, 0 0 10px #006eff, 0 0 20px #006eff, 0 0 40px #006eff;">development</span>
         </motion.h1>
 
         <motion.p

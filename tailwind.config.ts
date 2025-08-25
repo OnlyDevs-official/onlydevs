@@ -59,11 +59,11 @@ const config = {
         },
       },
       boxShadow: {
-        custom: "0 6px 10px 4px rgba(53, 114, 239, 0.6)", // Add custom shadow using the gradient color
+        custom: "0 6px 10px 4px rgba(53, 114, 239, 0.6)",
       },
       fontFamily: {
         "roboto-flex": ["Roboto Flex", "sans-serif"], 
-        aeonik: ["Aeonik", "sans-serif"], // ✅ Added Aeonik family
+        aeonik: ["Aeonik", "sans-serif"],
       },
 
       borderRadius: {
@@ -109,7 +109,6 @@ function addVariablesForColors({ addBase, theme }: any) {
 
   addBase({
     ":root": newVars,
-    // ✅ unified Aeonik setup
     ".aeonik-regular": {
       fontFamily: "Aeonik",
       fontWeight: "400",

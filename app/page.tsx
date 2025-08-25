@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div className="bg-black min-h-screen">
         <HeroSection />
-
+        <EventsCarousel />
         <FeaturesList />
         <FAQSection />
       </div>

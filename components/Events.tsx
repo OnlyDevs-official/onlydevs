@@ -28,6 +28,10 @@ const EventsCarousel: React.FC = () => {
       id: 3,
       url: '/assets/events/interface 14(1).png',
       alt: 'Interface 14'
+           link: {
+        href: 'https://luma.com/1jonjptg',
+        target: '_blank',
+      }
     },
     {
       id: 4,
@@ -38,15 +42,15 @@ const EventsCarousel: React.FC = () => {
       id: 5,
       url: '/assets/events/Stylt final.png',
       alt: 'Stylt',
-      link: {
-        href: 'https://luma.com/1jonjptg',
-        target: '_blank',
-      }
     },
     {
       id: 6,
       url: '/assets/events/interface 14(1).png',
       alt: 'Interface14'
+           link: {
+        href: 'https://luma.com/1jonjptg',
+        target: '_blank',
+      }
     }
   ];
 

@@ -33,6 +33,8 @@ const EventsCarousel: React.FC = () => {
     {
       id: 5,
       url: '/assets/events/Stylt final.png',
+      href: 'https://luma.com/1jonjptg',
+      target: '_blank',
       alt: 'Stylt'
     },
     {
@@ -170,6 +172,8 @@ const EventsCarousel: React.FC = () => {
               <img
                 src={image.url}
                 alt={image.alt}
+                href={image.href}
+                target={image.target}
                 className="w-full h-full object-contain rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
                 draggable={false}
               />

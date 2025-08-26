@@ -29,7 +29,7 @@ const TeamCarousel: React.FC = () => {
     },
     {
       id: 3,
-      imageUrl: '/assets/team_members/mayank.png',
+      imageUrl: '/assets/team_members/mayank.jpg',
       name: 'Mayank Rawat',
       designation: 'Content Production Lead & Frontend Developer',
     //   link: {

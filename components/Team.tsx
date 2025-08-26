@@ -17,32 +17,32 @@ const TeamCarousel: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       id: 1,
-      imageUrl: '/assets/team/member1.jpg',
+      imageUrl: '/assets/team_members/sankeerath.png',
       name: 'Sankeerath Santosh',
-      designation: 'CEO & Founder'
+      designation: 'Founder & Chief Executive Officer'
     },
     {
       id: 2,
-      imageUrl: '/assets/team/member2.jpg',
+      imageUrl: '/assets/team_members/pradyumna.jpg',
       name: 'Pradyumna Gururaj',
-      designation: 'CTO'
+      designation: 'Chief Technical Officer & Chief Analyst'
     },
     {
       id: 3,
-      imageUrl: '/assets/team/member3.jpg',
+      imageUrl: '/assets/team_members/mayank.png',
       name: 'Mayank Rawat',
-      designation: 'Social Media Designer',
+      designation: 'Content Production Lead & Frontend Developer',
     //   link: {
     //     href: 'https://linkedin.com/in/mikejohnson',
     //     target: '_blank',
     //   }
     },
-    // {
-    //   id: 4,
-    //   imageUrl: '/assets/team/member4.jpg',
-    //   name: 'Avani Rakesh',
-    //   designation: 'Motion Graphics Designer'
-    // },
+    {
+      id: 4,
+      imageUrl: '/assets/team_members/avani.jpg',
+      name: 'Avani Ramesh',
+      designation: 'Multimedia & Motion Graphic Designer'
+    },
     // {
     //   id: 5,
     //   imageUrl: '/assets/team/member5.jpg',

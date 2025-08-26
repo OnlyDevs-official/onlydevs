@@ -7,10 +7,10 @@ import TeamCarousel from "@/components/Team";
 function AboutUs() {
   return (
     <div className="relative min-h-screen">
-      {/* Background Image - Behind everything */}
-      <div className="absolute inset-0 flex items-center justify-end pr-4 md:pr-10 z-0">
-        <div className="md:w-1/2 md:block hidden">
-          <div className="bg-gradientColor rounded-tr-full rounded-bl-full m-4 md:m-10">
+      {/* Background Image - Behind everything, centered */}
+      <div className="absolute inset-0 flex items-center justify-center z-0 px-4 md:px-10">
+        <div className="w-full max-w-2xl md:block hidden">
+          <div className="bg-gradientColor rounded-tr-full rounded-bl-full mx-8">
             <div className="bg-gradientColor rounded-tl-full rounded-br-full">
               <Image src={LightBulb} alt="illustration" layout="responsive" />
             </div>

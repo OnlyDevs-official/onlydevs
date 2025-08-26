@@ -7,19 +7,40 @@ const CustomCursor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isClicking, setIsClicking] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  
+  // Position tracking with refs for smooth animation
+  const mousePos = useRef({ x: 0, y: 0 });
+  const followerPos = useRef({ x: 0, y: 0 });
+  const animationId = useRef<number>();
 
   useEffect(() => {
     const follower = followerRef.current;
-    
     if (!follower) return;
 
-    // Mouse move handler
+    // Smooth animation loop using requestAnimationFrame
+    const animateFollower = () => {
+      const dx = mousePos.current.x - followerPos.current.x;
+      const dy = mousePos.current.y - followerPos.current.y;
+      
+      // Smooth easing factor (lower = more lag/smoother, higher = more responsive)
+      const ease = 0.1;
+      
+      followerPos.current.x += dx * ease;
+      followerPos.current.y += dy * ease;
+      
+      follower.style.left = followerPos.current.x + 'px';
+      follower.style.top = followerPos.current.y + 'px';
+      
+      animationId.current = requestAnimationFrame(animateFollower);
+    };
+
+    // Start animation loop
+    animationId.current = requestAnimationFrame(animateFollower);
+
+    // Mouse move handler - just update target position
     const handleMouseMove = (e: MouseEvent) => {
-      // Update follower position with delay (no cursor, just follower)
-      setTimeout(() => {
-        follower.style.left = e.clientX + 'px';
-        follower.style.top = e.clientY + 'px';
-      }, 100);
+      mousePos.current.x = e.clientX;
+      mousePos.current.y = e.clientY;
     };
 
     // Mouse down handler
@@ -75,6 +96,11 @@ const CustomCursor: React.FC = () => {
       document.removeEventListener('mouseenter', handleMouseEnter);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);
+      
+      // Cancel animation frame
+      if (animationId.current) {
+        cancelAnimationFrame(animationId.current);
+      }
     };
   }, []);
 
@@ -86,11 +112,13 @@ const CustomCursor: React.FC = () => {
         className={`
           fixed w-5 h-5 pointer-events-none z-[9999]
           transform -translate-x-1/2 -translate-y-1/2 
-          transition-all duration-300 ease-out
           ${isVisible ? 'opacity-100' : 'opacity-0'}
           ${isClicking ? 'scale-75' : 'scale-100'}
           ${isHovering ? 'scale-150' : ''}
         `}
+        style={{
+          transition: 'opacity 0.3s ease, transform 0.2s ease',
+        }}
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 

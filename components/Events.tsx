@@ -28,10 +28,6 @@ const EventsCarousel: React.FC = () => {
       id: 3,
       url: '/assets/events/interface 14(1).png',
       alt: 'Interface 14'
-       link: {
-        href: 'https://luma.com/1jonjptg',
-        target: '_blank',
-      }
     },
     {
       id: 4,
@@ -42,15 +38,15 @@ const EventsCarousel: React.FC = () => {
       id: 5,
       url: '/assets/events/Stylt final.png',
       alt: 'Stylt',
+      link: {
+        href: 'https://luma.com/1jonjptg',
+        target: '_blank',
+      }
     },
     {
       id: 6,
       url: '/assets/events/interface 14(1).png',
       alt: 'Interface14'
-       link: {
-        href: 'https://luma.com/1jonjptg',
-        target: '_blank',
-      }
     }
   ];
 
@@ -60,10 +56,10 @@ const EventsCarousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number>();
 
-  // Smooth continuous auto-scroll
+  // Smooth continuous auto-scroll - Always running
   useEffect(() => {
     const smoothScroll = () => {
-      if (carouselRef.current && !isDragging) {
+      if (carouselRef.current) {
         const container = carouselRef.current;
         const maxScrollLeft = container.scrollWidth - container.clientWidth;
         
@@ -85,23 +81,22 @@ const EventsCarousel: React.FC = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isDragging]);
+  }, []); // Removed isDragging dependency
 
   // Update current index based on scroll position
   const updateCurrentIndex = () => {
     // Simplified since we're using continuous scroll
   };
 
-  // Touch/Mouse handlers for swipe functionality
+  // Touch/Mouse handlers for swipe functionality - Modified to not stop auto-scroll
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!carouselRef.current) return;
-    setIsDragging(true);
     setStartX(e.pageX - carouselRef.current.offsetLeft);
     setScrollLeft(carouselRef.current.scrollLeft);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !carouselRef.current) return;
+    if (!carouselRef.current) return;
     e.preventDefault();
     const x = e.pageX - carouselRef.current.offsetLeft;
     const walk = (x - startX) * 2;
@@ -109,12 +104,11 @@ const EventsCarousel: React.FC = () => {
   };
 
   const handleMouseUp = () => {
-    setIsDragging(false);
+    // Removed setIsDragging(false) to keep auto-scroll running
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (!carouselRef.current) return;
-    setIsDragging(true);
     setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
     setScrollLeft(carouselRef.current.scrollLeft);
   };
@@ -127,16 +121,16 @@ const EventsCarousel: React.FC = () => {
   };
 
   const handleTouchEnd = () => {
-    setIsDragging(false);
+    // Removed setIsDragging(false) to keep auto-scroll running
   };
 
   const handleScroll = () => {
     updateCurrentIndex();
   };
 
-  // Handle image click to prevent navigation during drag
+  // Handle image click - simplified since auto-scroll never stops
   const handleImageClick = (e: React.MouseEvent, link?: EventImage['link']) => {
-    if (isDragging || !link) {
+    if (!link) {
       e.preventDefault();
       return;
     }
@@ -166,9 +160,7 @@ const EventsCarousel: React.FC = () => {
         {/* Scrollable Images Container */}
         <div
           ref={carouselRef}
-          className={`flex gap-8 overflow-x-auto scrollbar-hide py-4 px-6 ${
-            isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'
-          }`}
+          className="flex gap-8 overflow-x-auto scrollbar-hide py-4 px-6 cursor-grab active:cursor-grabbing"
           style={{ 
             scrollbarWidth: 'none', 
             msOverflowStyle: 'none',
@@ -186,7 +178,7 @@ const EventsCarousel: React.FC = () => {
           {[...eventImages, ...eventImages, ...eventImages, ...eventImages].map((image, index) => (
             <div
               key={`${image.id}-${Math.floor(index / eventImages.length)}-${index}`}
-              className="flex-shrink-0 w-80 h-64 group relative"
+              className="flex-shrink-0 w-80 h-80 group relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out"
             >
               {image.link ? (
                 <a
@@ -199,7 +191,7 @@ const EventsCarousel: React.FC = () => {
                   <img
                     src={image.url}
                     alt={image.alt}
-                    className="w-full h-full object-contain rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
+                    className="w-full h-full object-cover select-none transition-transform duration-500 ease-out group-hover:scale-105"
                     draggable={false}
                   />
                 </a>
@@ -207,11 +199,11 @@ const EventsCarousel: React.FC = () => {
                 <img
                   src={image.url}
                   alt={image.alt}
-                  className="w-full h-full object-contain rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
+                  className="w-full h-full object-cover select-none transition-transform duration-500 ease-out group-hover:scale-105"
                   draggable={false}
                 />
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-2xl pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out pointer-events-none" />
             </div>
           ))}
         </div>

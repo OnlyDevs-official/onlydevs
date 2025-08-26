@@ -6,6 +6,10 @@ interface EventImage {
   id: number;
   url: string;
   alt: string;
+  link?: {
+    href: string;
+    target?: string;
+  };
 }
 
 const EventsCarousel: React.FC = () => {
@@ -33,11 +37,11 @@ const EventsCarousel: React.FC = () => {
     {
       id: 5,
       url: '/assets/events/Stylt final.png',
-      a: {
+      alt: 'Stylt',
+      link: {
         href: 'https://luma.com/1jonjptg',
         target: '_blank',
-      },
-      alt: 'Stylt'
+      }
     },
     {
       id: 6,
@@ -126,6 +130,15 @@ const EventsCarousel: React.FC = () => {
     updateCurrentIndex();
   };
 
+  // Handle image click to prevent navigation during drag
+  const handleImageClick = (e: React.MouseEvent, link?: EventImage['link']) => {
+    if (isDragging || !link) {
+      e.preventDefault();
+      return;
+    }
+    // Link will be handled by the anchor tag naturally
+  };
+
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* Heading */}
@@ -171,14 +184,30 @@ const EventsCarousel: React.FC = () => {
               key={`${image.id}-${Math.floor(index / eventImages.length)}-${index}`}
               className="flex-shrink-0 w-80 h-64 group relative"
             >
-              <img
-                src={image.url}
-                alt={image.alt}
-                a={image.a ? image.a : undefined}
-                className="w-full h-full object-contain rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
-                draggable={false}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-2xl" />
+              {image.link ? (
+                <a
+                  href={image.link.href}
+                  target={image.link.target || '_self'}
+                  rel={image.link.target === '_blank' ? 'noopener noreferrer' : undefined}
+                  onClick={(e) => handleImageClick(e, image.link)}
+                  className="block w-full h-full"
+                >
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    className="w-full h-full object-contain rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
+                    draggable={false}
+                  />
+                </a>
+              ) : (
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  className="w-full h-full object-contain rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-105 select-none"
+                  draggable={false}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out rounded-2xl pointer-events-none" />
             </div>
           ))}
         </div>

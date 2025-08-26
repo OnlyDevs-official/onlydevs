@@ -9,7 +9,7 @@ function AboutUs() {
     <div className="relative min-h-screen">
       {/* Background Image - Behind everything, centered */}
       <div className="absolute inset-0 flex items-center justify-center z-0 px-4 md:px-10">
-        <div className="w-full max-w-2xl md:block hidden">
+        <div className="w-[50vw] max-w-2xl md:block hidden">
           <div className="bg-gradientColor rounded-tr-full rounded-bl-full mx-8">
             <div className="bg-gradientColor rounded-tl-full rounded-br-full">
               <Image src={LightBulb} alt="illustration" layout="responsive" />
@@ -18,7 +18,6 @@ function AboutUs() {
         </div>
       </div>
 
-      {/* Team Carousel - In front of background */}
       <div className="relative z-10 pt-20">
         <TeamCarousel />
       </div>

@@ -124,7 +124,7 @@ const CustomCursor: React.FC = () => {
                   <g clipRule="nonzero" clipPath="url(#53b7649c0a)">
                     <g clipRule="nonzero" clipPath="url(#ecf87feebe)">
                       <path 
-                        style={{strokeNone: 'none', fillRule: 'nonzero', fillOpacity: 1}} 
+                        style={{ stroke: 'none', fillRule: 'nonzero', fillOpacity: 1 }} 
                         fill={isHovering ? '#4ecdc4' : '#006eff'}
                         d="M 0.699219 0.699219 L 318.300781 0.699219 L 318.300781 318.300781 L 0.699219 318.300781 Z M 0.699219 0.699219"
                       />

@@ -99,10 +99,10 @@ const EventsCarousel: React.FC = () => {
       {/* Carousel Container */}
       <div className="relative">
         {/* Left Gradient Overlay - Enhanced */}
-        <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none z-1" />
         
         {/* Right Gradient Overlay - Enhanced */}
-        <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none z-1" />
 
         {/* Scrollable Images Container */}
         <div

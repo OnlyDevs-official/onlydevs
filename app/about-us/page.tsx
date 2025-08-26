@@ -2,6 +2,7 @@
 import Image from "next/image";
 import LightBulb from "@/public/assets/light-illustration.png";
 import { motion } from "framer-motion";
+import TeamCarousel from "@/components/Team"; 
 function AboutUs() {
   return (
     <>
@@ -38,8 +39,13 @@ function AboutUs() {
           </div>
         </div>
       </div>
+
+    <TeamCarousel/>
+
     </>
   );
 }
+
+
 
 export default AboutUs;

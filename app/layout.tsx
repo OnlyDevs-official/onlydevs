@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/Cursor";
 
 export const metadata: Metadata = {
   title: "OnlyDevs",
@@ -16,6 +17,7 @@ export default function RootLayout({
 return (
   <html lang="en">
     <body className="aeonik-bold">
+      <CustomCursor />
       <Navbar />
       {children}
       <Footer />

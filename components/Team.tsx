@@ -18,7 +18,7 @@ const TeamCarousel: React.FC = () => {
     {
       id: 1,
       imageUrl: '/assets/team_members/sankeerath.png',
-      name: 'Sankeerath Santosh',
+      name: 'Sankeerth Santosh',
       designation: 'Founder & Chief Executive Officer'
     },
     {
@@ -40,7 +40,7 @@ const TeamCarousel: React.FC = () => {
     {
       id: 4,
       imageUrl: '/assets/team_members/aavani.jpg',
-      name: 'Avani Ramesh',
+      name: 'Aavani Ramesh',
       designation: 'Multimedia & Motion Graphic Designer'
     },
     // {

@@ -35,7 +35,7 @@ const FeaturesList = () => {
       >
         <motion.h1
           ref={titleRef}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto mb-10 aeonik-bold relative z-10"
+          className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto mb-10 aeonik-bold relative z-10"
           style={{
             opacity: titleOpacity,
             scale: titleScale,

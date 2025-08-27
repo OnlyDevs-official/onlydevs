@@ -39,7 +39,7 @@ const FeaturesList = () => {
             filter: titleFilter,
           }}
         >
-          Our Community
+          The Community
         </motion.h2>
         <div className="mx-auto max-w-7xl">
           {features.map((feature, index) => (

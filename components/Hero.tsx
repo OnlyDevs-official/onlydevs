@@ -19,20 +19,20 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          revolutionising <span className = "[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">design</span> & <span className = "[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">development</span>
+          revolutionising <span className="[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">design</span> & <span className="[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">development</span>
         </motion.h1>
 
         <motion.p
-        className="text-lg md:text-2xl font-aeonik font-light text-center max-w-4xl"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+          className="text-lg md:text-2xl font-aeonik font-light text-center max-w-4xl"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           Building the most versatile platform for designers & developers
         </motion.p>
-        
+
         <AnimatedButton />
-        
+
         {/* <motion.p
           className="text-lg md:text-2xl font-aeonik font-light text-center max-w-4xl mt-32"
           initial={{ opacity: 0, x: -20 }}
@@ -69,37 +69,38 @@ const AnimatedButton = () => {
     router.push("/#events-section", { scroll: true });
   };
   return (
-<div className="my-6 flex justify-center items-center gap-6">
-  <Link
-    href="https://discord.gg/QUaEBhBB8A"
-    target="_blank"
-  >
-    <button className="border bg-[#006eff] border-none rounded-full flex items-center justify-center px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 min-w-[120px] h-[50px] hover:bg-[#006eff] shadow-[0_0_20px_#006eff]">
-      Join Now
-    </button>
-  </Link>
-  
-  <button
-    className="border border-white rounded-full flex items-center justify-center p-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 w-[50px] h-[50px]"
-    onMouseEnter={() => setIsHovered(true)}
-    onMouseLeave={() => setIsHovered(false)}
-    onClick={handleClick}
-  >
-    <ArrowDownIcon
-      className={`w-5 h-5 transition-transform duration-300 ${
-        isHovered ? "transform translate-y-1" : ""
-      }`}
-    />
-  </button>
+    <div className="my-6 flex justify-center items-center gap-6">
+      <Link
+        href="https://discord.gg/QUaEBhBB8A"
+        target="_blank"
+      >
+        <button className="bg-[#006eff] border-none rounded-full flex items-center justify-center 
+        px-6 py-3 cursor-pointer transition-all duration-300 
+        min-w-[120px] h-[50px] hover:shadow-[0_0_20px_#006eff]">
+          Join Now
+        </button>
+      </Link>
 
-  <Link
-    href="https://www.instagram.com/onlydev.s"
-    target="_blank"
-  >
-    <button className="border border-white rounded-full flex items-center justify-center px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 min-w-[120px] h-[50px]">
-      Discover
-    </button>
-  </Link>
-</div>
+      <button
+        className="border border-white rounded-full flex items-center justify-center p-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 w-[50px] h-[50px]"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={handleClick}
+      >
+        <ArrowDownIcon
+          className={`w-5 h-5 transition-transform duration-300 ${isHovered ? "transform translate-y-1" : ""
+            }`}
+        />
+      </button>
+
+      <Link
+        href="https://www.instagram.com/onlydev.s"
+        target="_blank"
+      >
+        <button className="border border-white rounded-full flex items-center justify-center px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 min-w-[120px] h-[50px]">
+          Discover
+        </button>
+      </Link>
+    </div>
   );
 };

@@ -121,5 +121,9 @@ function addVariablesForColors({ addBase, theme }: any) {
       fontFamily: "Aeonik",
       fontWeight: "300",
     },
+    ".orbikular-medium": {
+      fontFamily: "Orbikular",
+      fontWeight: "500",
+    },
   });
 }

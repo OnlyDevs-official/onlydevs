@@ -26,6 +26,12 @@ html {
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Orbikular';
+  src: url('/fonts/Orbikular.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
 
 
 

@@ -12,16 +12,20 @@ import { useRouter } from "next/navigation";
 const HeroSection = () => {
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-center items-center  text-white px-4">
+      <div className="min-h-screen flex flex-col justify-center items-center text-white px-4">
         <motion.h1
           className="text-4xl md:text-8xl font-bold aeonik-bold kerning-tightest text-center mb-8 mt-36"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          revolutionising <span className="[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">design</span> & <span className="[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">development</span>
+          <div className="mb-4">
+            revolutionising
+          </div>
+          <div>
+            <span className="[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">design</span> & <span className="[text-shadow:0_0_5px_#006eff,0_0_10px_#006eff,0_0_20px_#006eff,0_0_40px_#006eff]">development</span>
+          </div>
         </motion.h1>
-
         <motion.p
           className="text-lg md:text-2xl font-aeonik font-light text-center max-w-4xl"
           initial={{ opacity: 0, y: -20 }}

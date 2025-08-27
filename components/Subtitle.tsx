@@ -15,7 +15,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
                     <React.Fragment key={index}>
                         {part}
                         {index < arr.length - 1 && (
-                            <span className="font-bold text--600">need <span className="orbikular-medium">your</span> help</span>
+                           <span>need <span className="orbikular-medium">your</span> help</span>
                         )}
                     </React.Fragment>
                 ))}

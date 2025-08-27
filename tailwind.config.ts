@@ -64,6 +64,7 @@ const config = {
       fontFamily: {
         "roboto-flex": ["Roboto Flex", "sans-serif"], 
         aeonik: ["Aeonik", "sans-serif"],
+        orbikular: ["Orbikular", "sans-serif"],
       },
 
       borderRadius: {

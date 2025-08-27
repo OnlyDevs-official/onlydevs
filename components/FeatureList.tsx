@@ -5,8 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import { features } from "@/lib/consts";
 
 const FeaturesList = () => {
-  // Title animations
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const titleRef = useRef(null);
   const { scrollYProgress: titleScrollProgress } = useScroll({
     target: titleRef,
     offset: ["start end", "end start"],
@@ -14,40 +13,17 @@ const FeaturesList = () => {
 
   const titleOpacity = useTransform(
     titleScrollProgress,
-    [0, 0.2, 0.8, 1],
+    [0, 0.1, 0.9, 1],
     [0, 1, 1, 0]
   );
   const titleScale = useTransform(
     titleScrollProgress,
-    [0, 0.2, 0.8, 1],
-    [0.8, 1, 1, 0.8]
+    [0, 0.1, 0.9, 1],
+    [0.9, 1, 1, 0.9]
   );
   const titleFilter = useTransform(
     titleScrollProgress,
-    [0, 0.2, 0.8, 1],
-    ["blur(4px)", "blur(0px)", "blur(0px)", "blur(4px)"]
-  );
-
-  // Paragraph animations
-  const paraRef = useRef<HTMLParagraphElement | null>(null);
-  const { scrollYProgress: paraScrollProgress } = useScroll({
-    target: paraRef,
-    offset: ["start end", "end start"],
-  });
-
-  const paraOpacity = useTransform(
-    paraScrollProgress,
-    [0, 0.2, 0.8, 1],
-    [0, 1, 1, 0]
-  );
-  const paraScale = useTransform(
-    paraScrollProgress,
-    [0, 0.2, 0.8, 1],
-    [0.8, 1, 1, 0.8]
-  );
-  const paraFilter = useTransform(
-    paraScrollProgress,
-    [0, 0.2, 0.8, 1],
+    [0, 0.1, 0.9, 1],
     ["blur(4px)", "blur(0px)", "blur(0px)", "blur(4px)"]
   );
 
@@ -59,7 +35,7 @@ const FeaturesList = () => {
       >
         <motion.h1
           ref={titleRef}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto mb-20 aeonik-bold"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto mb-10 aeonik-bold relative z-10"
           style={{
             opacity: titleOpacity,
             scale: titleScale,
@@ -70,12 +46,11 @@ const FeaturesList = () => {
         </motion.h1>
 
         <motion.p
-          ref={paraRef}
-          className="text-lg md:text-xl text-center text-white font-light max-w-3xl mx-auto mb-12"
+          className="text-lg md:text-xl text-center text-white font-light max-w-3xl mx-auto mb-16 relative z-10"
           style={{
-            opacity: paraOpacity,
-            scale: paraScale,
-            filter: paraFilter,
+            opacity: titleOpacity,
+            scale: titleScale,
+            filter: titleFilter,
           }}
         >
           Network with{" "}
@@ -93,7 +68,7 @@ const FeaturesList = () => {
   );
 };
 
-interface FeatureItemProps {
+interface featureItemProps {
   feature: {
     title: string;
     description: string;
@@ -102,19 +77,15 @@ interface FeatureItemProps {
   index: number;
 }
 
-const FeatureItem = ({ feature, index }: FeatureItemProps) => {
-  const ref = useRef<HTMLDivElement | null>(null);
+const FeatureItem = ({ feature, index }: featureItemProps) => {
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [0.8, 1, 1, 0.8]
-  );
+  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.8, 1, 1, 0.8]);
   const filter = useTransform(
     scrollYProgress,
     [0, 0.3, 0.7, 1],

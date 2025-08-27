@@ -30,8 +30,7 @@ const FeaturesList = () => {
   return (
     <>
       <section id="featureList" className=" mt-[12rem] py-24 px-4 sm:px-6 lg:px-8">
-        <motion.h2
-          ref={titleRef}
+        <motion.h1 ref={titleRef}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto mb-20 aeonik-bold"
           style={{
             opacity: titleOpacity,
@@ -40,7 +39,18 @@ const FeaturesList = () => {
           }}
         >
           The Community
-        </motion.h2>
+        </motion.h1>
+
+        <motion.p
+          className="text-lg md:text-xl text-center text-white font-light max-w-3xl mx-auto mb-12"
+          style={{
+            opacity: titleOpacity,
+            scale: titleScale,
+            filter: titleFilter,
+          }}
+        >
+          Network with <span className="orbikular-medium">real industry experts</span> who know what they're talking about.
+        </motion.p>
         <div className="mx-auto max-w-7xl">
           {features.map((feature, index) => (
             <FeatureItem key={feature.title} feature={feature} index={index} />

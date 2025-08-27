@@ -26,7 +26,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
 
       <div className="flex gap-4 flex-wrap justify-center">
         <Link href="https://discord.gg/QUaEBhBB8A" target="_blank">
-          <button className="bg-[#006eff] text-white rounded-full px-6 py-3 font-medium 
+          <button className="bg-[#006eff] text-white rounded-full px-6 py-3 font-bold 
             cursor-pointer transition-all duration-300 min-w-[140px] h-[50px] 
             hover:shadow-[0_0_20px_#006eff]">
             Join Now
@@ -34,7 +34,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
         </Link>
 
         <Link href="https://www.instagram.com/onlydev.s" target="_blank">
-          <button className="border border-white text-white rounded-full px-6 py-3 font-medium 
+          <button className="border border-white text-white rounded-full px-6 py-3 font-bold 
             cursor-pointer transition-all duration-300 min-w-[140px] h-[50px] 
             hover:bg-white hover:text-black">
             Discover

@@ -69,7 +69,13 @@ const AnimatedButton = () => {
     router.push("/#events-section", { scroll: true });
   };
   return (
-    <div className="my-6">
+    <div className="my-6 flex justify-center items-center gap-3">
+      <Link
+      href="https://discord.gg/QUaEBhBB8A"
+        target="_blank"
+      >
+      <button className="border border-white rounded-full flex items-center pl-7 py-3 cursor-pointer transition-all duration-300  hover:bg-opacity-10 w-[80px] h-[60px]">Join Now</button>
+      </Link>
       <button
         className="border border-white rounded-full flex items-center pl-7 py-3 cursor-pointer transition-all duration-300  hover:bg-opacity-10 w-[80px] h-[60px]"
         onMouseEnter={() => setIsHovered(true)}
@@ -82,6 +88,14 @@ const AnimatedButton = () => {
           }`}
         />
       </button>
+
+                <Link
+      href="https://www.instagram.com/onlydev.s"
+        target="_blank"
+      >
+      <button className="border border-white rounded-full flex items-center pl-7 py-3 cursor-pointer transition-all duration-300  hover:bg-opacity-10 w-[80px] h-[60px]">Discover</button>
+      </Link>
+
     </div>
   );
 };

@@ -6,7 +6,7 @@ import StayAheadWithoutBreakingaSweat from "@/public/assets/features/stay-ahead-
 
 export const features = [
   {
-    title: "Because Google Doesn't Have All The Answers",
+    title: "Google Doesn't Have All The Answers",
     description:
       "Who needs endless searching when you've got a whole community ready to spill the beans on the latest hacks, tips, and tricks?",
     image: GoogleDoesntHaveAllTheAnswers,

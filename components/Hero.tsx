@@ -62,11 +62,11 @@ const AnimatedButton = () => {
   const handleClick = (e: any) => {
     e.preventDefault();
     e.preventDefault();
-    const targetSection = document.getElementById("featureList");
+    const targetSection = document.getElementById("events-section");
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-    router.push("/#featureList", { scroll: true });
+    router.push("/#events-section", { scroll: true });
   };
   return (
     <div className="my-6">

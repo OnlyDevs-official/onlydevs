@@ -97,7 +97,7 @@ const AnimatedButton = () => {
         href="https://www.instagram.com/onlydev.s"
         target="_blank"
       >
-        <button className="border border-white rounded-full flex items-center justify-center px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 min-w-[120px] h-[50px]">
+        <button className="border border-white rounded-full flex items-center justify-center px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 min-w-[120px] h-[50px] hover:bg-white hover:text-black">
           Discover
         </button>
       </Link>

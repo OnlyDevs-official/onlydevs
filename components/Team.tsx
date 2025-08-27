@@ -102,10 +102,10 @@ const TeamCarousel: React.FC = () => {
       {/* Carousel Container */}
       <div className="relative">
         {/* Left Gradient Overlay */}
-        <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-[5] pointer-events-none" />
         
         {/* Right Gradient Overlay */}
-        <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-black via-black/80 to-transparent z-[5] pointer-events-none" />
 
         {/* Scrollable Team Cards Container */}
         <div

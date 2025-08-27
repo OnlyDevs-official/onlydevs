@@ -29,11 +29,10 @@ const FeaturesList = () => {
 
   return (
     <>
-      <div id="featureList"></div>
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="featureList" className=" mt-72 py-24 px-4 sm:px-6 lg:px-8">
         <motion.h2
           ref={titleRef}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto mb-20 aeonik-bold"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto  mb-20 aeonik-bold"
           style={{
             opacity: titleOpacity,
             scale: titleScale,

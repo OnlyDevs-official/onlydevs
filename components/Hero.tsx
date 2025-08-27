@@ -28,7 +28,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         >
-          Building a platform tailored for designers & developers
+          Building the most versatile platform for designers & developers
         </motion.p>
         
         <AnimatedButton />

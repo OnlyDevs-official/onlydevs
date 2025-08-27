@@ -28,7 +28,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Building the most versatile platform for <span className="font-orbikular-medium">designers</span> & <span className="font-orbikular-medium">developers</span>
+          Building the most versatile platform for <span className="orbikular-medium">designers</span> & <span className="orbikular-medium">developers</span>
         </motion.p>
 
         <AnimatedButton />

@@ -21,7 +21,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
                 ))}
             </p>
 
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
                 <Link
                     href="https://discord.gg/QUaEBhBB8A"
                     target="_blank"
@@ -42,7 +42,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
                     </button>
                 </Link>
 
-            </div>
+            </div> */}
 
         </section>
     );

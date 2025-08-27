@@ -114,7 +114,7 @@ const FeatureItem = ({ feature, index }: featureItemProps) => {
             {feature.title}
           </h3>
           <p className="text-sm sm:text-lg md:text-xl font-aeonik font-light">
-            {feature.description.replace(/'/g, "&apos;")}
+            {feature.description.replace(/'/g, "'")}
           </p>
         </div>
       </div>

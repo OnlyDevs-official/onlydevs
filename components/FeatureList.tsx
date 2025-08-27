@@ -31,7 +31,7 @@ const FeaturesList = () => {
     <>
       <section
         id="featureList"
-        className="mt-[12rem] py-24 px-4 sm:px-6 lg:px-8"
+        className="mt-[8rem] py-24 px-4 sm:px-6 lg:px-8"
       >
         <motion.h1
           ref={titleRef}

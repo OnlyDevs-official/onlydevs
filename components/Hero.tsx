@@ -71,7 +71,7 @@ const AnimatedButton = () => {
   return (
     <div className="my-6 flex justify-center items-center gap-6">
       <Link
-        href="https://discord.gg/QUaEBhBB8A"
+        href="https://discord.gg/9UbbYWEQDH"
         target="_blank"
       >
         <button className="bg-[#006eff] border-none rounded-full flex items-center justify-center 

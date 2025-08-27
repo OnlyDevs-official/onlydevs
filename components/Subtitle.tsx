@@ -11,7 +11,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
 }) => {
   return (
     <section className="w-full flex flex-col items-center mt-12 mb-16 px-4">
-      <p className="text-4xl md:text-3xl text-white font-semibold text-center max-w-3xl leading-relaxed mb-8">
+      <p className="text-4xl md:text-xl text-white font-semibold text-center max-w-3xl leading-relaxed mb-8">
         {text.split("need your help").map((part, index, arr) => (
           <React.Fragment key={index}>
             {part}
@@ -25,7 +25,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
       </p>
 
       <div className="flex gap-4 flex-wrap justify-center">
-        <Link href="https://discord.gg/QUaEBhBB8A" target="_blank">
+        <Link href="https://discord.gg/9UbbYWEQDH" target="_blank">
           <button className="bg-[#006eff] text-white rounded-full px-6 py-3 font-bold 
             cursor-pointer transition-all duration-300 min-w-[140px] h-[50px] 
             hover:shadow-[0_0_20px_#006eff]">

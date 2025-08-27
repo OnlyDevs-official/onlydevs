@@ -74,7 +74,7 @@ const AnimatedButton = () => {
     href="https://discord.gg/QUaEBhBB8A"
     target="_blank"
   >
-    <button className="border bg-[#006eff] border-white rounded-full flex items-center justify-center px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 min-w-[120px] h-[50px] hover:shadow-[0_0_20px_#006eff]">
+    <button className="border bg-[#006eff] border-none rounded-full flex items-center justify-center px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-opacity-10 min-w-[120px] h-[50px] hover:shadow-[0_0_20px_#006eff]">
       Join Now
     </button>
   </Link>

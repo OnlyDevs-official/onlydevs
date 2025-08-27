@@ -85,7 +85,7 @@ const EventsCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div id="events-section" className="w-full max-w-7xl mx-auto px-4 py-8 scroll-mt-20 md:scroll-mt-24">
+    <div id="events-section" className="w-full max-w-7xl mx-auto px-4 py-8 scroll-mt-20 md:scroll-mt-[6.5rem]">
       <div className="text-center mb-8">
         <h2 className="text-6xl font-aeonik font-bold text-white mb-3">
           Our Events

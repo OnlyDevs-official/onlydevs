@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import EventsCarousel from "@/components/Events";
 import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Subtitle from "@/components/Subtitle";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />
+        <Subtitle />
         <FAQSection />
       </div>
     </>

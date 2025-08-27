@@ -54,8 +54,7 @@ const FeaturesList = () => {
           }}
         >
           Network with{" "}
-          <span className="orbikular-medium">real industry experts</span> who
-          know what they're talking about.
+          <span className="orbikular-medium">real industry experts</span> who know what they&apos;re talking about.
         </motion.p>
 
         <div className="mx-auto max-w-7xl">
@@ -115,7 +114,7 @@ const FeatureItem = ({ feature, index }: featureItemProps) => {
             {feature.title}
           </h3>
           <p className="text-sm sm:text-lg md:text-xl font-aeonik font-light">
-            {feature.description}
+            {feature.description.replace(/'/g, "&apos;")}
           </p>
         </div>
       </div>

@@ -11,7 +11,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
 }) => {
   return (
     <section className="w-full flex flex-col items-center mt-12 mb-16 px-4">
-      <p className="text-3xl md:text-2xl text-white font-semibold text-center max-w-3xl leading-relaxed mb-8">
+      <p className="text-4xl md:text-3xl text-white font-semibold text-center max-w-3xl leading-relaxed mb-8">
         {text.split("need your help").map((part, index, arr) => (
           <React.Fragment key={index}>
             {part}

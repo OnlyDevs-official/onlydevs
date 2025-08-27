@@ -91,7 +91,7 @@ const EventsCarousel: React.FC = () => {
           Our Events
         </h2>
         <p className="text-lg text-white font-aeonik font-light">
-          We don&apos;t just host events, we curate experiences.
+          We don&apos;t just host events, we curate <span className="orbikular-medium">experiences</span>.
         </p>
       </div>
 

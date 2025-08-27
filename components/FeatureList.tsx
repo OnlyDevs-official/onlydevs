@@ -35,7 +35,7 @@ const FeaturesList = () => {
       >
         <motion.h1
           ref={titleRef}
-          className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-6xl mx-auto mb-10 aeonik-bold relative z-10"
+          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-center max-w-6xl mx-auto mb-10 aeonik-bold relative z-10"
           style={{
             opacity: titleOpacity,
             scale: titleScale,
@@ -44,6 +44,7 @@ const FeaturesList = () => {
         >
           The Community
         </motion.h1>
+
 
         <motion.p
           className="text-lg md:text-xl text-center text-white font-light max-w-3xl mx-auto mb-16 relative z-10"
@@ -95,9 +96,8 @@ const FeatureItem = ({ feature, index }: featureItemProps) => {
     <motion.div ref={ref} className="mb-20" style={{ opacity, scale, filter }}>
       <div className="flex flex-col md:flex-row items-center justify-around gap-8">
         <div
-          className={`${
-            index % 2 === 1 ? "md:order-2" : ""
-          } bg-gradient-to-t from-gradientColor to-[#0F1015] rounded-xl`}
+          className={`${index % 2 === 1 ? "md:order-2" : ""
+            } bg-gradient-to-t from-gradientColor to-[#0F1015] rounded-xl`}
         >
           <Image
             src={feature.image}

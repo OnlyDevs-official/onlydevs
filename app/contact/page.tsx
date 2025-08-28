@@ -10,6 +10,7 @@ import {
 } from "@radix-ui/react-icons";
 import { FormEvent, useState } from "react";
 import { Web3FormApi } from "@/lib/utils";
+import Squares from "@/components/ui/Squares";
 
 const Contact = () => {
   const [Loading, setLoading] = useState(false);
@@ -173,6 +174,13 @@ const Contact = () => {
         </Alert>
       )}
     </div>
+     <Squares
+          speed={0.5}
+          squareSize={40}
+          direction='diagonal'
+          borderColor='#22004a'
+          hoverFillColor='#0000'
+        />
   );
 };
 

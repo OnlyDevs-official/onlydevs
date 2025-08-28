@@ -20,9 +20,9 @@ interface SquaresProps {
 const Squares: React.FC<SquaresProps> = ({
   direction = "right",
   speed = 1,
-  borderColor = "#333",
+  borderColor = "#00008B",
   squareSize = 40,
-  hoverFillColor = "#222",
+  hoverFillColor = "#0000",
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const requestRef = useRef<number | null>(null);

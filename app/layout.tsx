@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/Cursor";
+import Gridbg from "@/components/Gridbg";
 
 export const metadata: Metadata = {
   title: "OnlyDevs",
@@ -18,6 +19,7 @@ return (
   <html lang="en">
     <body className="aeonik-bold">
       <CustomCursor />
+      <Gridbg />
       <Navbar />
       {children}
       <Footer />

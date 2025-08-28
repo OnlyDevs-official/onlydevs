@@ -20,19 +20,18 @@ export default function RootLayout({
       <body className="aeonik-bold">
         <CustomCursor />
         
-        {/* Fixed background grid */}
-        <div className="fixed inset-0 z-0">
+        {/* Background with explicit sizing */}
+        <div className="squares-background">
           <Squares 
             direction="diagonal" 
             speed={1} 
-            borderColor="#333" 
+            borderColor="#666" 
             squareSize={40}
-            hoverFillColor="#222"
+            hoverFillColor="#333"
           />
         </div>
         
-        {/* Main content with higher z-index */}
-        <div className="relative z-10">
+        <div className="relative">
           <Navbar />
           {children}
           <Footer />

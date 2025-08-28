@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
 
 type CanvasStrokeStyle = string | CanvasGradient | CanvasPattern;
@@ -18,7 +20,7 @@ interface SquaresProps {
 const Squares: React.FC<SquaresProps> = ({
   direction = "right",
   speed = 1,
-  borderColor = "#999",
+  borderColor = "#333",
   squareSize = 40,
   hoverFillColor = "#222",
 }) => {
@@ -35,10 +37,17 @@ const Squares: React.FC<SquaresProps> = ({
     const ctx = canvas.getContext("2d");
 
     const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      numSquaresX.current = Math.ceil(canvas.width / squareSize) + 1;
-      numSquaresY.current = Math.ceil(canvas.height / squareSize) + 1;
+      // Get viewport dimensions
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      
+      canvas.width = width;
+      canvas.height = height;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      
+      numSquaresX.current = Math.ceil(width / squareSize) + 1;
+      numSquaresY.current = Math.ceil(height / squareSize) + 1;
     };
 
     window.addEventListener("resize", resizeCanvas);
@@ -68,10 +77,12 @@ const Squares: React.FC<SquaresProps> = ({
           }
 
           ctx.strokeStyle = borderColor;
+          ctx.lineWidth = 0.5;
           ctx.strokeRect(squareX, squareY, squareSize, squareSize);
         }
       }
 
+      // Optional: Add gradient overlay (remove if you don't want it)
       const gradient = ctx.createRadialGradient(
         canvas.width / 2,
         canvas.height / 2,
@@ -81,7 +92,7 @@ const Squares: React.FC<SquaresProps> = ({
         Math.sqrt(canvas.width ** 2 + canvas.height ** 2) / 2
       );
       gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
-      gradient.addColorStop(1, "#060010");
+      gradient.addColorStop(1, "rgba(6, 0, 16, 0.3)");
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -163,8 +174,17 @@ const Squares: React.FC<SquaresProps> = ({
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full border-none block"
-    ></canvas>
+      className="w-full h-full"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        zIndex: -1,
+        pointerEvents: 'auto'
+      }}
+    />
   );
 };
 

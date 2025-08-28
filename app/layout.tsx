@@ -23,7 +23,7 @@ export default function RootLayout({
           speed={0.5}
           squareSize={40}
           direction='diagonal'
-          borderColor='#0e0021'
+          borderColor='#22004a'
           hoverFillColor='#0000'
         />
         <Navbar />

@@ -19,24 +19,18 @@ export default function RootLayout({
     <html lang="en">
       <body className="aeonik-bold">
         <CustomCursor />
-        
-        {/* Background with explicit sizing */}
-        <div className="squares-background">
-          <Squares 
-            direction="diagonal" 
-            speed={1} 
-            borderColor="#666" 
-            squareSize={40}
-            hoverFillColor="#333"
-          />
-        </div>
-        
-        <div className="relative">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
-      </body>
-    </html>
+        <Squares
+          speed={0.5}
+          squareSize={40}
+          direction='diagonal' // up, down, left, right, diagonal
+          borderColor='#fff'
+          hoverFillColor='#222'
+        />
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
+    </body>
+    </html >
   );
 }

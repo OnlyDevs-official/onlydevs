@@ -164,11 +164,6 @@ const Squares: React.FC<SquaresProps> = ({
     <canvas
       ref={canvasRef}
       className="w-full h-full border-none block"
-      style={{
-        width: '100vw',
-        height: '100vh',
-        background: 'rgba(255, 0, 0, 0.1)' // Temporary red tint to see if canvas is there
-      }}
     ></canvas>
   );
 };

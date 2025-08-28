@@ -10,7 +10,7 @@ import Subtitle from "@/components/Subtitle";
 export default function Home() {
   return (
     <>
-      <div >
+      <div className= "min-h-screen">
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />

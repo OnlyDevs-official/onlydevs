@@ -22,7 +22,7 @@ export default function RootLayout({
         <Squares
           speed={0.5}
           squareSize={40}
-          direction='diagonal' // up, down, left, right, diagonal
+          direction='diagonal'
           borderColor='#00008B'
           hoverFillColor='#0000'
         />

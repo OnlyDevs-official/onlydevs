@@ -10,7 +10,6 @@ import {
 } from "@radix-ui/react-icons";
 import { FormEvent, useState } from "react";
 import { Web3FormApi } from "@/lib/utils";
-import Squares from "@/components/ui/Squares";
 
 const Contact = () => {
   const [Loading, setLoading] = useState(false);
@@ -43,7 +42,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center pt-20">
+    <div className="min-h-screen text-white flex flex-col items-center pt-20">
       <main className="flex-grow container mx-auto px-4">
         <div className="bg-black rounded-[50px] md:rounded-[100px] px-16 max-w-6xl py-16 mx-auto my-20 shadow-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -174,13 +173,6 @@ const Contact = () => {
         </Alert>
       )}
     </div>
-     <Squares
-          speed={0.5}
-          squareSize={40}
-          direction='diagonal'
-          borderColor='#22004a'
-          hoverFillColor='#0000'
-        />
   );
 };
 

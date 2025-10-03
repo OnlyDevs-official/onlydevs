@@ -2,44 +2,50 @@
 
 import React, { useEffect, useRef } from 'react';
 
-interface TeamMember {
+interface Services {
   id: number;
   imageUrl: string;
   name: string;
-  designation: string;
+  description: string;
   link?: {
     href: string;
     target?: string;
   };
 }
 
-const TeamCarousel: React.FC = () => {
-  const teamMembers: TeamMember[] = [
+const ServicesCarousel: React.FC = () => {
+  const services: Services[] = [
     {
       id: 1,
-      imageUrl: '/assets/team_members/sankeerath.png',
-      name: 'Sankeerth Santosh',
-      designation: 'Founder & Chief Executive Officer'
+      imageUrl: '',
+      name: 'Brand Identity',
+    description: 'Your story, visualized. We design the core assets, logo, palette and typography, that make your brand instantly recognizable and deeply memorable.'
     },
     {
       id: 2,
-      imageUrl: '/assets/team_members/pradyumna.jpg',
-      name: 'Pradyumna Gururaj',
-      designation: 'Chief Technical Officer & Chief Analyst'
+      imageUrl: '',
+      name: 'Graphic Design',
+    description: 'Digital experiences that feel intuitive and effortless. We design not just how it looks, but how it works guiding users with clarity and purpose.'
     },
     {
       id: 3,
-      imageUrl: '/assets/team_members/mayank.jpg',
-      name: 'Mayank Rawat',
-      designation: 'Content Production Lead & Frontend Developer',
+      imageUrl: '',
+      name: 'Content Production',
+    description: 'For stories that connect and convert- We craft compelling copy, video, and imagery that gives your brand a powerful voice and builds authentic relationships.',
 
     },
     {
       id: 4,
-      imageUrl: '/assets/team_members/aavani.jpg',
-      name: 'Aavani Ramesh',
-      designation: 'Multimedia & Motion Graphic Designer'
+      imageUrl: '',
+      name: 'UI/UX Design',
+    description: 'Digital experiences that feel intuitive and effortless. We design not just how it looks, but how it works guiding users with clarity and purpose.'
     },
+    // {
+    //   id: 5,
+    //   imageUrl: '/assets/team_services/aavani.jpg',
+    //   name: '',
+    // //description: 'Multimedia & Motion Graphic Designer'
+    // },
 
   ];
 
@@ -74,18 +80,19 @@ const TeamCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8">
-      {/* Heading */}
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-aeonik font-bold text-white mb-3">
-          Meet Our Team
-        </h2>
-        <p className="text-lg text-white font-aeonik font-light">
-          The brilliant minds behind our success.
-        </p>
-      </div>
+        // <div className="w-full max-w-7xl mx-auto px-4 py-8">
+        //   {/* Heading */}
+        //   <div className="text-center mb-8">
+        //     <h2 className="text-4xl font-aeonik font-bold text-white mb-3">
+        //       Meet Our Team
+        //     </h2>
+        //     <p className="text-lg text-white font-aeonik font-light">
+        //       The brilliant minds behind our success.
+        //     </p>
+        //   </div>
 
       {/* Carousel Container */}
+        <
       <div className="relative">
         {/* Left Gradient Overlay */}
         <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-[5] pointer-events-none" />
@@ -103,24 +110,24 @@ const TeamCarousel: React.FC = () => {
           }}
         >
           {/* Render multiple sets for seamless infinite loop */}
-          {[...teamMembers, ...teamMembers, ...teamMembers, ...teamMembers].map((member, index) => (
+          {[...services, ...services, ...services, ...services].map((service, index) => (
             <div
-              key={`${member.id}-${Math.floor(index / teamMembers.length)}-${index}`}
+              key={`${service.id}-${Math.floor(index / services.length)}-${index}`}
               className="flex-shrink-0 w-72 group relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out"
               style={{ backgroundColor: '#006eff' }}
             >
-              {member.link ? (
+              {service.link ? (
                 <a
-                  href={member.link.href}
-                  target={member.link.target || '_self'}
-                  rel={member.link.target === '_blank' ? 'noopener noreferrer' : undefined}
+                  href={service.link.href}
+                  target={service.link.target || '_self'}
+                  rel={service.link.target === '_blank' ? 'noopener noreferrer' : undefined}
                   className="block w-full cursor-pointer"
                 >
                   {/* Image Section */}
                   <div className="w-full h-64 overflow-hidden bg-white/10 relative">
                     <img
-                      src={member.imageUrl}
-                      alt={member.name}
+                      src={service.imageUrl}
+                      alt={service.name}
                       className="w-full h-full object-cover select-none transition-transform duration-500 ease-out group-hover:scale-105"
                       draggable={false}
                     />
@@ -130,10 +137,10 @@ const TeamCarousel: React.FC = () => {
                   {/* Info Section */}
                   <div className="p-6 text-center">
                     <h3 className="text-xl font-aeonik font-bold text-white mb-2 group-hover:text-white/90 transition-colors duration-300">
-                      {member.name}
+                      {service.name}
                     </h3>
                     <p className="text-white/80 font-aeonik font-light text-sm group-hover:text-white/70 transition-colors duration-300">
-                      {member.designation}
+                      {service.description}
                     </p>
                   </div>
                 </a>
@@ -142,8 +149,8 @@ const TeamCarousel: React.FC = () => {
                   {/* Image Section */}
                   <div className="w-full h-64 overflow-hidden bg-white/10 relative">
                     <img
-                      src={member.imageUrl}
-                      alt={member.name}
+                      src={service.imageUrl}
+                      alt={service.name}
                       className="w-full h-full object-cover select-none transition-transform duration-500 ease-out group-hover:scale-105"
                       draggable={false}
                     />
@@ -153,10 +160,10 @@ const TeamCarousel: React.FC = () => {
                   {/* Info Section */}
                   <div className="p-6 text-center">
                     <h3 className="text-xl font-aeonik font-bold text-white mb-2 group-hover:text-white/90 transition-colors duration-300">
-                      {member.name}
+                      {service.name}
                     </h3>
                     <p className="text-white/80 font-aeonik font-light text-sm group-hover:text-white/70 transition-colors duration-300">
-                      {member.designation}
+                      {service.description}
                     </p>
                   </div>
                 </div>
@@ -193,4 +200,4 @@ const TeamCarousel: React.FC = () => {
   );
 };
 
-export default TeamCarousel;
+export default ServicesCarousel;

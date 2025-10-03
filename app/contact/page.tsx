@@ -11,6 +11,7 @@ import {
 import { FormEvent, useState } from "react";
 import { Web3FormApi } from "@/lib/utils";
 import services from "@/public/assets/services.png";
+import ServicesCarousel from "@/components/ui/services";
 
 const Contact = () => {
   const [Loading, setLoading] = useState(false);
@@ -152,7 +153,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        </servicesCarousel>
       </main>
 
       {AlertBox.isDisplayed && (
@@ -176,6 +176,7 @@ const Contact = () => {
       )}
     </div>
   );
+  </ServicesCarousel>
 };
 
 

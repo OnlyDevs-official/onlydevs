@@ -10,7 +10,6 @@ import {
 } from "@radix-ui/react-icons";
 import { FormEvent, useState } from "react";
 import { Web3FormApi } from "@/lib/utils";
-import services from "@/public/assets/services.png";
 import ServicesCarousel from "@/components/ui/services";
 
 const Contact = () => {
@@ -155,6 +154,8 @@ const Contact = () => {
         </div>
       </main>
 
+      <ServicesCarousel />
+
       {AlertBox.isDisplayed && (
         <Alert className="bg-gradientColor absolute w-auto rounded-xl right-2 bottom-2 md:right-8 md:bottom-8">
           <motion.div
@@ -176,8 +177,6 @@ const Contact = () => {
       )}
     </div>
   );
-  </ServicesCarousel>
 };
-
 
 export default Contact;

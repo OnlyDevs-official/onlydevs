@@ -16,12 +16,12 @@ import { TextAlignJustifyIcon } from "@radix-ui/react-icons";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-
+  
   const handleSelect = (href: string) => {
     setIsOpen(false);
     router.push(href);
   };
-
+  
   return (
     <nav className="fixed left-1/2 transform -translate-x-1/2 w-[50vw] flex items-center box-border justify-between md:px-6 px-4 py-2 md:py-4 backdrop-blur-md bg-opacity-35 rounded-full border border-gray-700 bg-black z-50 mt-3">
       <Link href="/">
@@ -33,6 +33,7 @@ const Navbar = () => {
           className="hover:underline"
         />
       </Link>
+      
       <div className="hidden md:flex text-sm md:text-base rounded-full space-x-2 md:space-x-4 font-aeonik font-regular">
         <Link href="/">
           <Button>Home</Button>
@@ -41,9 +42,13 @@ const Navbar = () => {
           <Button>About Us</Button>
         </Link>
         <Link href="/contact">
+          <Button>Agency</Button>
+        </Link>
+        <Link href="/contact">
           <Button>Contact</Button>
         </Link>
       </div>
+      
       <div className="md:hidden">
         <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
           <DropdownMenuTrigger asChild>
@@ -59,12 +64,16 @@ const Navbar = () => {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem onSelect={() => handleSelect("/contact")}>
+              Agency
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem onSelect={() => handleSelect("/contact")}>
               Contact
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <Link href="https://discord.gg/QUaEBhBB8A" target="_blank">
-                <button className="text-white bg-gradient-to-r from-gradientColor  to-[#222225] rounded-full text-sm transition duration-200 px-2 md:px-4 py-1 md:py-2 hover:scale-[1.1]">
+                <button className="text-white bg-gradient-to-r from-gradientColor to-[#222225] rounded-full text-sm transition duration-200 px-2 md:px-4 py-1 md:py-2 hover:scale-[1.1]">
                   Become a member!
                 </button>
               </Link>
@@ -72,12 +81,13 @@ const Navbar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+      
       <Link
         href="https://discord.gg/QUaEBhBB8A"
         target="_blank"
         className="md:block hidden"
       >
-        <button className="text-white bg-gradient-to-r from-gradientColor  to-[#222225] rounded-full text-sm transition duration-200 px-2 md:px-4 py-1 md:py-2 hover:scale-[1.1]">
+        <button className="text-white bg-gradient-to-r from-gradientColor to-[#222225] rounded-full text-sm transition duration-200 px-2 md:px-4 py-1 md:py-2 hover:scale-[1.1]">
           Become a Member!
         </button>
       </Link>

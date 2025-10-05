@@ -10,7 +10,7 @@ import {
 } from "@radix-ui/react-icons";
 import { FormEvent, useState } from "react";
 import { Web3FormApi } from "@/lib/utils";
-import ServicesCarousel from "@/components/ui/services";
+import ServicesCarousel from "@/components/services";
 
 const Contact = () => {
   const [Loading, setLoading] = useState(false);

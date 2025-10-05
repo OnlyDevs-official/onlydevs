@@ -10,7 +10,6 @@ import {
 } from "@radix-ui/react-icons";
 import { FormEvent, useState } from "react";
 import { Web3FormApi } from "@/lib/utils";
-import ServicesCarousel from "@/components/services";
 
 const Contact = () => {
   const [Loading, setLoading] = useState(false);
@@ -44,7 +43,6 @@ const Contact = () => {
 
   return (
     <>
-      <ServicesCarousel />
       <div className="min-h-screen text-white flex flex-col items-center pt-20">
         <main className="flex-grow container mx-auto px-4">
           <div className="bg-black rounded-[50px] md:rounded-[100px] px-16 max-w-6xl py-16 mx-auto my-20 shadow-custom">

@@ -43,6 +43,9 @@ const Navbar = () => {
         <Link href="/contact">
           <Button>Contact</Button>
         </Link>
+        <Link href="/">
+          <Button>Agency</Button>
+        </Link>
       </div>
       <div className="md:hidden">
         <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>

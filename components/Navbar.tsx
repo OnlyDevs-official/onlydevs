@@ -66,6 +66,11 @@ const Navbar = () => {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
+              </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem onSelect={() => handleSelect("/contact")}>
+              Agency
+              </DropdownMenuItem>
               <Link href="https://discord.gg/QUaEBhBB8A" target="_blank">
                 <button className="text-white bg-gradient-to-r from-gradientColor  to-[#222225] rounded-full text-sm transition duration-200 px-2 md:px-4 py-1 md:py-2 hover:scale-[1.1]">
                   Become a member!

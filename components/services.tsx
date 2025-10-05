@@ -67,7 +67,7 @@ const ServicesCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full backdrop-blur-md bg-opacity-5 py-12">
+    <div className="w-full  backdrop-blur-md bg-black/5 py-12">
       <div className="relative">
         {/* Left Gradient Overlay */}
         <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />

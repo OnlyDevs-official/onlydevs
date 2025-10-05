@@ -63,7 +63,7 @@ const Navbar = () => {
               About Us
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onSelect={() => handleSelect("/contact")}>
+            <DropdownMenuItem onSelect={() => handleSelect("/agency")}>
               Agency
             </DropdownMenuItem>
             <DropdownMenuSeparator />

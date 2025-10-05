@@ -2,11 +2,11 @@
 import React, { ReactNode, useState } from "react";
 import ServicesCarousel from "@/components/services";
 
-function agency(){
-    return(
+function agency() {
+    return (
         <>
-        <div className ="mt-8"></div>
-            <ServicesCarousel/>
+            <div className="mt-8"></div>
+            <ServicesCarousel />
         </>
     )
 }

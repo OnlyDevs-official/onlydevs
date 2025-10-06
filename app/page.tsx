@@ -29,17 +29,9 @@ export default function Home() {
           </p>
         </div>
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div>
+        <img src="GridLocked-comingsoon" alt="gridlocked coming soon in soundwaves" width="600" height="700">
+        </div>
         <br />
         
         <Subtitle />

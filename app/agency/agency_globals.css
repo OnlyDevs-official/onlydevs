@@ -1,3 +1,15 @@
 #agencyheading {
   font-size: 50px;
+  text-align: center;
+  line-height: 0.99;
+  margin-top: 150px;
+}
+
+.glow {
+text-shadow: 
+        0 0 5px rgb(0, 102, 255),
+        0 0 10px rgba(22, 123, 255, 0.8),
+        0 0 20px rgba(0, 110, 255, 0.6),
+        0 0 40px rgba(6, 122, 255, 0.4),
+        0 0 80px rgba(0, 85, 255, 0.2);
 }

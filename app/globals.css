@@ -63,6 +63,12 @@ text-align: center;
   font-size: 20px;
 }
 
+#secondnav {
+background-color: #004cff;
+border-radius: 10px;
+}
+
+
 @layer base {
   :root {
     --background: 240 10% 3.9%;

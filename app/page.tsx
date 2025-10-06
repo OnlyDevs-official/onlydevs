@@ -20,7 +20,7 @@ export default function Home() {
       <h1 id="blogheading">
       Gridlocked
       </h1>
-          <p>
+          <p id="blogtext">
             Access our elite blog.
           </p>
         </div>

@@ -1,8 +1,12 @@
+body{
+padding-top: 100px;
+}
+
 #agencyheading {
   font-size: 50px;
   text-align: center;
   line-height: 0.99;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .glow {

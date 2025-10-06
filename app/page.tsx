@@ -24,6 +24,19 @@ export default function Home() {
             Access our elite blog.
           </p>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         
         <Subtitle />
         <FAQSection />

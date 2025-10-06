@@ -64,9 +64,13 @@ text-align: center;
 }
 
 #secondnav {
-background-color: #004cff;
+background-color: rgba(0, 0, 0, 0.4);
 border-radius: 10px;
-width: 50px;
+width: 150px;
+height: 75px;
+backdrop-filter: blur(10px);
+opacity: 1;
+
 }
 
 

@@ -4,6 +4,7 @@ import ServicesCarousel from "@/components/services";
 
 function agency(){
     return(
+        <h1>Loool</h1>
         <>
             <ServicesCarousel/>
         </>

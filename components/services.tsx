@@ -16,7 +16,7 @@ const ServicesCarousel: React.FC = () => {
     {
       id: 1,
       imageUrl: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400',
-      name: 'Brand Identity',
+      name: 'Web Design',
       description: 'Your story, visualized. We design the core assets, logo, palette and typography, that make your brand instantly recognizable and deeply memorable.'
     },
     {
@@ -34,7 +34,7 @@ const ServicesCarousel: React.FC = () => {
     {
       id: 4,
       imageUrl: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=400',
-      name: 'UI/UX Design',
+      name: 'Digital Marketing',
       description: 'Digital experiences that feel intuitive and effortless. We design not just how it looks, but how it works guiding users with clarity and purpose.'
     },
   ];

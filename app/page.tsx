@@ -12,9 +12,10 @@ export default function Home() {
   return (
     <>
       <div className= "min-h-screen">
-        
-<button>Gridlocked</button>
-    
+        <div id="secondnav">
+        <button id="blogbutton">Gridlocked</button>
+        </div>
+      
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />

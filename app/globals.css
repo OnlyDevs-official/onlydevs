@@ -75,7 +75,8 @@ margin-top: 15px;
 position: fixed;
 display: flex;
 justify-content: center;
-border: 2px solid #75acff;
+border: 0.99px solid #75acff;
+z-index: 200;
 }
 
 #blogbutton {

@@ -29,17 +29,9 @@ export default function Home() {
           </p>
         </div>
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div>
+          <img src="./GridLocked-comingsoon.png" alt="gridlocked_placeholder_img" width="600" height="500">
+        </div>
         <br />
         
         <Subtitle />

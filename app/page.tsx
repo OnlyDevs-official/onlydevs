@@ -14,6 +14,11 @@ export default function Home() {
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />
+        <div>
+      <h1>
+      Gridlocked
+      </h1>
+        </div>
         <Subtitle />
         <FAQSection />
       </div>

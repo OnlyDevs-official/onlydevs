@@ -6,6 +6,7 @@ import EventsCarousel from "@/components/Events";
 import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Subtitle from "@/components/Subtitle";
+import './globals.css';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <EventsCarousel />
         <FeaturesList />
         <div>
-      <h1>
+      <h1 id="blogheading">
       Gridlocked
       </h1>
         </div>

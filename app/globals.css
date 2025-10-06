@@ -70,6 +70,9 @@ width: 150px;
 height: 75px;
 backdrop-filter: blur(10px);
 opacity: 1;
+margin-left: 50px;
+margin-top: 50px;
+position: fixed;
 
 }
 

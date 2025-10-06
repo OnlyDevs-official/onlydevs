@@ -6,7 +6,7 @@ import './agency_globals.css';
 function agency(){
     return(
         <>
-            <h1 id="agencyheading">We <span className="glow">build</span>what others can't <span className="glow">imagine.</span>
+            <h1 id="agencyheading">We <span className="glow">build</span>what others can&apos;t <span className="glow">imagine.</span>
             </h1>
             <ServicesCarousel/>
         </>

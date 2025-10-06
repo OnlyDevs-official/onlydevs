@@ -15,11 +15,16 @@ export default function Home() {
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />
+        
         <div>
       <h1 id="blogheading">
       Gridlocked
       </h1>
+          <p>
+            Access our elite blog.
+          </p>
         </div>
+        
         <Subtitle />
         <FAQSection />
       </div>

@@ -52,9 +52,11 @@ html {
 font-size: 40px;
 text-align: center;
 }
+
 #blogtext {
-align-text: center;
-text-style: ligher;
+display: flex;
+justify-content: center;
+text-align: center;
   
 }
 

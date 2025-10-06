@@ -54,6 +54,7 @@ text-align: center;
 }
 #blogtext {
 src: url('/fonts/Aeonik-Light.ttf') format('truetype');
+align-text: center;
 }
 
 @layer base {

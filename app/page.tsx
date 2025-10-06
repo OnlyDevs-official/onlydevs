@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className= "min-h-screen">
         <div id="secondnav">
-        <button id="blogbutton">Gridlocked</button>
+        <button id="blogbutton">Blog</button>
         </div>
       
         <HeroSection />

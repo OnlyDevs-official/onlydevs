@@ -71,9 +71,15 @@ height: 75px;
 backdrop-filter: blur(10px);
 opacity: 1;
 margin-left: 50px;
-margin-top: 50px;
+margin-top: 70px;
 position: fixed;
+display: flex;
+justify-content: center;
 
+}
+
+#blogbutton {
+background-color: #0066ff;
 }
 
 

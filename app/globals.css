@@ -80,11 +80,14 @@ z-index: 200;
 }
 
 #blogbutton {
-background-color: #0066ff;
+background-color: rgba(56, 56, 56, 0.4);
 border-radius: 20px;
 height: 40px;
 width: 100px;
 margin-top: 10px;
+opacity: 1;
+backdrop-filter: blur(5px);
+
 }
 
 #blogbutton:hover {

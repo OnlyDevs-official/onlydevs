@@ -8,10 +8,10 @@
 
 .glow {
 text-shadow: 
-        0 0 5px rgb(255, 0, 0),
-        0 0 10px rgb(255, 127, 0),
-        0 0 20px rgb(255, 255, 0),
-        0 0 30px rgb(0, 255, 0),
-        0 0 40px rgb(0, 0, 255),
-        0 0 50px rgb(139, 0, 255);
+        -2px -2px 10px rgb(255, 0, 0),      /* Red */
+        0px -2px 10px rgb(255, 127, 0),     /* Orange */
+        2px -2px 10px rgb(255, 255, 0),     /* Yellow */
+        -2px 2px 10px rgb(0, 255, 0),       /* Green */
+        0px 2px 10px rgb(0, 0, 255),        /* Blue */
+        2px 2px 10px rgb(139, 0, 255);      /* Purple */
 }

@@ -65,12 +65,12 @@ text-align: center;
 
 #secondnav {
 background-color: rgba(0, 0, 0, 0.4);
-border-radius: 40px;
+border-radius: 50px;
 width: 150px;
-height: 80px;
+height: 100px;
 backdrop-filter: blur(10px);
 opacity: 1;
-margin-left: 95px;
+margin-left: 150px;
 margin-top: 15px;
 position: fixed;
 display: flex;
@@ -82,7 +82,7 @@ justify-content: center;
 background-color: #0066ff;
 border-radius: 20px;
 height: 40px;
-width: 80px;
+width: 120px;
 margin-top: 20px;
 }
 

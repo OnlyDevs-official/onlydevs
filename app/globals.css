@@ -65,9 +65,9 @@ text-align: center;
 
 #secondnav {
 background-color: rgba(0, 0, 0, 0.4);
-border-radius: 50px;
+border-radius: 45px;
 width: 150px;
-height: 100px;
+height: 81px;
 backdrop-filter: blur(10px);
 opacity: 1;
 margin-left: 150px;
@@ -83,7 +83,7 @@ background-color: #0066ff;
 border-radius: 20px;
 height: 40px;
 width: 120px;
-margin-top: 20px;
+margin-top: 45px;
 }
 
 

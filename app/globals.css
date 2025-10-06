@@ -70,12 +70,12 @@ width: 120px;
 height: 60px;
 backdrop-filter: blur(10px);
 opacity: 1;
-margin-left: 150px;
-margin-top: 15px;
+margin-left: 175px;
+margin-top: 30px;
 position: fixed;
 display: flex;
 justify-content: center;
-border: 0.2px solid #ababab;
+border: 0.01px solid #ababab;
 z-index: 200;
 }
 

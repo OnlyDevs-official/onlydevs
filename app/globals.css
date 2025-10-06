@@ -65,13 +65,13 @@ text-align: center;
 
 #secondnav {
 background-color: rgba(0, 0, 0, 0.4);
-border-radius: 10px;
+border-radius: 25px;
 width: 150px;
 height: 75px;
 backdrop-filter: blur(10px);
 opacity: 1;
-margin-left: 50px;
-margin-top: 10px;
+margin-left: 95px;
+margin-top: 15px;
 position: fixed;
 display: flex;
 justify-content: center;

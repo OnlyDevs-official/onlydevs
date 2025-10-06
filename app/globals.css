@@ -75,7 +75,7 @@ margin-top: 26px;
 position: fixed;
 display: flex;
 justify-content: center;
-border: 0.01px solid #ababab;
+border: 0.01px solid #383838;
 z-index: 200;
 }
 
@@ -88,8 +88,8 @@ margin-top: 10px;
 }
 
 #blogbutton:hover {
-background-color: #000000;
-color: #FFFFFF;
+background-color: #FFFFFF;
+color: #000000;
 }
 
 

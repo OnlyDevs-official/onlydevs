@@ -27,6 +27,7 @@ export default function Home() {
           <p id="blogtext">
             Access our elite blog.
           </p>
+          <img src="./GridLocked-comingsoon.png" alt="gridlocked_placeholder_img" width="600" height="500" />
         </div>
         <br />
         <br />

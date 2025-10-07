@@ -34,6 +34,11 @@ export default function Home() {
           <p id="blogtext">
             Access our elite blog.
           </p>
+          <br />
+          <br />
+          <a href="./gridlocked.html">
+          <button id="gridlockedbutton">↗</button>
+          </a>
         </div>
         <br />
         <br />

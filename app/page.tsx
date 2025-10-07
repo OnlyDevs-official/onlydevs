@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className= "min-h-screen">
         <div id="secondnav">
-          <a href="./#blogsection">
+          <a href="./#blogheading">
           <button type="button" id="blogbutton">Blog</button>
           </a>
         </div>
@@ -34,7 +34,6 @@ export default function Home() {
           <p id="blogtext">
             Access our elite blog.
           </p>
-          <img src="./GridLocked-comingsoon.png" alt="gridlocked_placeholder_img" width="600" height="500" />
         </div>
         <br />
         <br />

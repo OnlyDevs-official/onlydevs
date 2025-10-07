@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className= "min-h-screen">
         <div id="secondnav">
-        <button onClick="document.location='./#blogsection'" id="blogbutton">Blog</button>
+        <button onClick={() => window.location.href = '/#blogsection'} id="blogbutton">Blog</button>
         </div>
       
         <HeroSection />

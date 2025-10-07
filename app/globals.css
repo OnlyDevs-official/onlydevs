@@ -95,6 +95,10 @@ background-color: #FFFFFF;
 color: #000000;
 }
 
+#gridlocked{
+  color: #000000;
+}
+
 
 @layer base {
   :root {

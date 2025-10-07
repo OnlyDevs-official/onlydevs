@@ -13,7 +13,9 @@ export default function Home() {
     <>
       <div className= "min-h-screen">
         <div id="secondnav">
-        <button id="blogbutton">Blog</button>
+          <a href="./#blogsection">
+          <button type="button" id="blogbutton">Blog</button>
+          </a>
         </div>
       
         <HeroSection />

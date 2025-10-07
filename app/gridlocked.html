@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridlocked</title>
+   <style>
 
+    @font-face {
+    font-family: 'Aeonik Bold';
+    src: url('fonts/AeonikBold.ttf') format('truetype');
+    font-weight: bold;
+}
+        body{
+            background-color: black;
+            cursor: url(img/bluedot.png), auto;
+        }
+        h1{
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;  
+            margin-left: 15px;
+            margin-bottom: 15px; 
+            opacity: 1;
+            font-size: 30px;
+        }
+        header{
+            background-color: rgb(36, 118, 242);
+            border-radius:100px;
+            width: 600px;
+            margin-left: 400px;
+            height: 120px;
+            position: fixed;
+            opacity:;
+        }
+        button{
+            font-family: 'Segoe UI',sans-serif;
+            border-color: rgb(0, 0, 0);
+            height: 40px;
+            width:80px;
+            margin-top: -100px;
+            position: sticky;
+            border-radius: 15px;
+        }
+        #b3{
+         margin-left: 10px;
+        }
+        p{
+            color: white;
+            font-family: 'Segoe UI';
+            font-size: 18px;
+            margin-bottom: 75px;
+        }
+        #byod{
+            margin-top: -28px;
+            margin-left: 35px;
+            margin-bottom: 0px;
+            font-size: 12px;
+        }
+        sub{
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        #feed{
+            margin-left: 200px
+        }
+        #boxtop{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.433);
+            border-radius: 40px;
+            width: 600px;
+            margin-left: 420px;
+            position: fixed;
+            opacity: 1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            z-index: 100;
+            box-shadow: 0 0 1.4px rgb(0, 102, 255);
+        }
+        #feedbutton{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 11px;
+            width: 80px;
+            height: 30px;
+            background-color: #006eff;
+            display: block;
+            border: none;
+        }
+        button:hover{
+            background-color: white;
+            color: black;    
+        }
+        button:active{
+            background-color: #006eff;
+        }   
+        
+        h2{
+            color: white;
+            font-family: 'Aeonik Bold', sans-serif;
+            text-align: center;
+            font-size: 100px;
+            line-height: 0.99
+        }
+     .glow {
+    text-shadow: 
+        0 0 5px rgb(0, 102, 255),      /* Tight inner glow */
+        0 0 10px rgba(22, 123, 255, 0.8),   /* Medium layer */
+        0 0 20px rgba(0, 110, 255, 0.6),   /* Wider layer */
+        0 0 40px rgba(6, 122, 255, 0.4),   /* Soft outer glow */
+        0 0 80px rgba(0, 85, 255, 0.2);   /* Very soft halo */
+}
+
+#gsb{
+    margin: 0 auto;
+    display: block;
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    font-family: 'Aeonik Bold', sans-serif;
+    font-weight: bolder;
+    margin-top: -30px;
+    color: white;
+
+    
+    
+}
+
+        #aboutbutton{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 11px;
+            width: 100px;
+            height: 50px;
+            background-color: #006eff;
+            display: block;
+            border: none;
+            font-family: 'Aeonik Bold', sans-serif;
+            color: white;
+        }
+        #aboutbutton:hover{
+            width: 101px;
+            height: 51px;
+            font-size: 20px;
+        }
+        #gsb:hover{
+            width: 103px;
+            height:  53px;
+            font-size: 15px;
+        }
+
+        #sec2text{
+            color: white;
+            font-family: 'Aeonik Bold', sans-serif;
+            font-size: 60px;
+            text-align-last: center;
+        }
+        
+   </style>
+</head>
+<body>
+    <div id="boxtop">
+     <h1> Gridlocked </h1>
+     <button onclick="document.location='index.html'" id  ="aboutbutton">Home</button>
+     <button onclick="document.location='about.html'" id  ="aboutbutton">About</button>
+     <button onclick="document.location='feed.html'" id  ="aboutbutton">Feed</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+
+    <h2>
+       real <span class="glow">experts.</span> real <span class="glow">issues.</span> <br>
+       real<span class="glow"> perspectives. </span> 
+    </h2>
+    <button onclick="document.location='#section2'" id="gsb" class="b1">↓</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+<div id="section2">
+<h3 id="sec2text">
+    Read about fresh perspectives <br> adressing industry issues and <br>more, by real field experts.    
+</h3>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+<div class="wrapper">
+</html>

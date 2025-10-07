@@ -36,7 +36,7 @@ export default function Home() {
           </p>
           <br />
           <br />
-          <a href="./gridlocked.html">
+          <a href="./gridlocked">
           <button id="gridlockedbutton">↗</button>
           </a>
         </div>

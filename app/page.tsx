@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className= "min-h-screen">
         <div id="secondnav">
-          <a href="./#scrollhook">
+          <a href="./#gridlocked">
           <button type="button" id="blogbutton">Blog</button>
           </a>
         </div>
@@ -21,7 +21,7 @@ export default function Home() {
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />
-<p id="scrollhook">Hook</p>
+<p id="gridlocked">Hook</p>
         <br />
         <br />
         <br />

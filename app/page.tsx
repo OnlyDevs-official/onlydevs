@@ -21,6 +21,11 @@ export default function Home() {
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />
+
+        <br />
+        <br />
+        <br />
+        <br />
         
         <div id="blogsection">
       <h2 id="blogheading">

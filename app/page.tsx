@@ -13,14 +13,14 @@ export default function Home() {
     <>
       <div className= "min-h-screen">
         <div id="secondnav">
-        <button id="blogbutton">Blog</button>
+        <button onclick="document.location='./#blogsection'" id="blogbutton">Blog</button>
         </div>
       
         <HeroSection />
         <EventsCarousel />
         <FeaturesList />
         
-        <div>
+        <div id="blogsection">
       <h2 id="blogheading">
       Gridlocked
       </h2>

@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className= "min-h-screen">
         <div id="secondnav">
-        <button onclick="document.location='./#blogsection'" id="blogbutton">Blog</button>
+        <button onClick="document.location='./#blogsection'" id="blogbutton">Blog</button>
         </div>
       
         <HeroSection />

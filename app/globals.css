@@ -48,7 +48,7 @@ html {
   display: block;
 }
 
-.pixelisbutton{
+.pixelisbutton button {
   background-color: #f13957;
   color: #ffde59;
 }

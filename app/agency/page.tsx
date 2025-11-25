@@ -13,7 +13,7 @@ function agency(){
             <h1 id="agencyheading">We <span className="glow"> build</span> what others can&apos;t <span className="glow">imagine.</span>
             </h1>
             <br />
-            <p class="Subtexts">Solutions that work.</p>
+            <p className="Subtexts">Solutions that work.</p>
             <br />
             <br />
             <ServicesCarousel/>

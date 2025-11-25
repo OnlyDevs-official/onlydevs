@@ -48,6 +48,11 @@ html {
   display: block;
 }
 
+#pixelisbutton{
+  background-color: #f13957;
+  color: #ffde59;
+}
+
 #blogheading {
 font-size: 40px;
 text-align: center;

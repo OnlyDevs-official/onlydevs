@@ -42,7 +42,7 @@ const Navbar = () => {
           <Button>About Us</Button>
         </Link>
         <Link href="/agency">
-          <Button id="pixelisbutton">Pixelis</Button>
+          <Button className="pixelisbutton">Pixelis</Button>
         </Link>
         <Link href="/contact">
           <Button>Contact</Button>

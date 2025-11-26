@@ -67,7 +67,7 @@ const ServicesCarousel: React.FC = () => {
   }, []);
 
   return (
-      <div className="w-full max-w-7xl mx-auto px-4 py-8">
+      <div className="w-full max-w-7xl mx-auto px-4 py-8 bg-blue-600/20 backdrop-blur-xl rounded-3xl">
       <div className="relative">
         {/* Left Gradient Overlay */}
         <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />
@@ -87,8 +87,7 @@ const ServicesCarousel: React.FC = () => {
           {[...services, ...services, ...services, ...services].map((service, index) => (
             <div
               key={`${service.id}-${Math.floor(index / services.length)}-${index}`}
-              className="flex-shrink-0 w-72 group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 ease-out"
-              style={{ backgroundColor: '#006eff' }}
+              className="flex-shrink-0 w-72 group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 ease-out bg-blue-600/90 backdrop-blur-sm"
             >
               {service.link ? (
                 <a

@@ -97,7 +97,7 @@ const ServicesCarousel: React.FC = () => {
                   rel={service.link.target === '_blank' ? 'noopener noreferrer' : undefined}
                   className="block w-full cursor-pointer"
                 >
-                  <div className="w-full h-64 overflow-hidden bg-white/10 relative">
+                  <div className="relative w-full overflow-hidden bg-white/10 backdrop-blur-lg py-16">
                     <img
                       src={service.imageUrl}
                       alt={service.name}
